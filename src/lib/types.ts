@@ -1,0 +1,2 @@
+export type Part = {name:string;api:string;description:string};
+export type Entry = {id:string;name:string;kind:'element'|'style';platform:'web'|'macos'|'style';description:string;aliases:string[];phrases:string[];api:{framework:string;symbol:string}[];anatomy:Part[];behavior:string;debug:string;related:string[];sources:{title:string;url:string}[];demo:string;prompt:string;status:string;updated:string;signals?:string[]};

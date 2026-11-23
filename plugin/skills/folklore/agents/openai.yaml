@@ -1,0 +1,6 @@
+interface:
+  display_name: "Folklore"
+  short_description: "Name UI patterns and turn them into working briefs"
+  default_prompt: "Use $folklore to identify this interface pattern and explain how to implement it."
+policy:
+  allow_implicit_invocation: true

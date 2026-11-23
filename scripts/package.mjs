@@ -1,0 +1,10 @@
+import {mkdir,copyFile} from 'node:fs/promises';
+import {execFileSync} from 'node:child_process';
+import {fileURLToPath} from 'node:url';
+import './generate.mjs';
+await mkdir('public/downloads',{recursive:true});
+await copyFile('LICENSE','plugin/LICENSE');
+const out=fileURLToPath(new URL('../public/downloads/',import.meta.url));
+execFileSync('zip',['-qr',`${out}folklore-plugin-1.0.0.zip`,'.'],{cwd:'plugin'});
+execFileSync('zip',['-qr',`${out}folklore-skill-1.0.0.zip`,'folklore'],{cwd:'plugin/skills'});
+console.log('Packaged plugin and standalone skill 1.0.0.');

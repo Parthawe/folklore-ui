@@ -1,0 +1,9 @@
+node_modules/
+dist/
+.astro/
+.sites/
+artifacts/
+*.tar.gz
+*.zip
+.DS_Store
+public/downloads/

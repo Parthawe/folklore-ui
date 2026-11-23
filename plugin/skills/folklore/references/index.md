@@ -1,0 +1,42 @@
+# Folklore catalog
+
+- [Modal dialog](dialog.md) | web | A focused task in a window above the page. The rest of the interface is temporarily unavailable.
+- [Drawer](drawer.md) | web | A panel that enters from an edge to hold navigation or a secondary task. It can be modal or non-modal.
+- [Bottom sheet](sheet.md) | web | An edge-attached surface, often at the bottom of a small screen, for a compact task or set of choices.
+- [Scrim](scrim.md) | web | The dimming layer between a modal surface and the page behind it. Blur is optional.
+- [Popover](popover.md) | web | An anchored surface with supporting content or controls. Opening one does not inherently make the page modal.
+- [Tooltip](tooltip.md) | web | A short description shown when a control is hovered or focused. It contains no interactive controls.
+- [Dropdown menu](dropdown-menu.md) | web | A button opens a compact list of commands. Choosing a command performs an action.
+- [Combobox](combobox.md) | web | A field paired with a popup of suggestions or options. An editable version filters choices as you type.
+- [Command palette](command-palette.md) | web | A searchable launcher for application actions, often opened with a keyboard shortcut.
+- [Tabs](tabs.md) | web | A row of choices that switches the content displayed in one shared region.
+- [Accordion](accordion.md) | web | Stacked headings that expand to reveal their own content. More than one section may be open.
+- [Toast](toast.md) | web | A brief status message that appears after an action without taking focus away from the task.
+- [Form field](form-field.md) | web | A labeled control with supporting guidance and an error message when its value needs attention.
+- [Data table](data-table.md) | web | Related records arranged in rows and columns with explicit column headers.
+- [Pagination](pagination.md) | web | Controls that move through discrete pages of a collection.
+- [Breadcrumbs](breadcrumbs.md) | web | A trail of ancestors showing where the current page sits in a hierarchy.
+- [Skeleton](skeleton.md) | web | A placeholder shaped like content whose layout is known while that content loads.
+- [Spinner](spinner.md) | web | An indeterminate activity indicator used when the amount of work remaining is unknown.
+- [Carousel](carousel.md) | web | A sequence of slides displayed in a bounded region with controls to move between them.
+- [Segmented control](segmented-control.md) | web | A connected group of compact, mutually exclusive choices for one value.
+- [Window](window.md) | macos | A top-level application surface that can be moved, resized, and managed independently.
+- [Toolbar](toolbar.md) | macos | A row of actions associated with the current window or document, often integrated with the title bar.
+- [Sidebar](sidebar.md) | macos | A navigation column that selects destinations or source collections within a window.
+- [Menu bar](menu-bar.md) | macos | The system-managed strip of application menus at the top of the Mac display.
+- [Status item](status-item.md) | macos | An application-owned item on the right side of the system menu bar, opening a menu or supporting view.
+- [Mac popover](mac-popover.md) | macos | A transient native surface anchored to another control, used for supporting information or a small task.
+- [Mac sheet](mac-sheet.md) | macos | A modal dialog attached to a particular window. Its task belongs to that window’s document or context.
+- [Inspector](inspector.md) | macos | A supporting panel for viewing or changing properties of the current selection.
+- [Dock badge](dock-badge.md) | macos | A short count or status label displayed over an application’s Dock tile.
+- [Vibrancy](vibrancy.md) | macos | A native material effect that combines translucency and appearance-aware rendering behind interface content.
+- [Minimalism](minimalism.md) | style | A deliberately reduced visual vocabulary that gives essential content and actions room to be understood.
+- [Flat design](flat-design.md) | style | An interface drawn with planar color and simple shapes, without pretending controls are physical objects.
+- [Skeuomorphism](skeuomorphism.md) | style | Digital controls borrow the materials, forms, or operating metaphors of physical objects.
+- [Neumorphism](neumorphism.md) | style | Controls appear molded out of a shared soft surface, with paired light and dark shadows.
+- [Glassmorphism](glassmorphism.md) | style | Translucent, blurred surfaces sit in front of visible background content, often edged by a thin highlight.
+- [Web brutalism](web-brutalism.md) | style | A loose web label for exposed structure, direct typography, and an intentionally unpolished or uncompromising presentation.
+- [Neobrutalism](neobrutalism.md) | style | A graphic web style using bold outlines, flat color, blunt type, and hard offset shadows.
+- [Y2K digital](y2k.md) | style | A retrospective family of millennium-era digital looks using synthetic materials, metallic finishes, and speculative technological forms.
+- [Frutiger Aero](frutiger-aero.md) | style | A retrospective label for glossy, optimistic interfaces and imagery that combine nature with consumer technology.
+- [Swiss Style](swiss-style.md) | style | A graphic-design tradition associated with systematic grids, asymmetric composition, sans-serif type, and clear information hierarchy.

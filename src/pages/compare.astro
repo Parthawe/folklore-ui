@@ -1,0 +1,5 @@
+---
+import Layout from '../layouts/Layout.astro';
+import {catalog} from '../../content/catalog.mjs';
+---
+<Layout title="Compare interface patterns — Folklore"><section class="compare-page" data-compare><h1>Similar shape.<br/>Different job.</h1><p>Put two patterns side by side. The behavior usually tells them apart.</p><div class="compare-controls"><label for="compare-a">First pattern<select id="compare-a">{catalog.map(e=><option value={e.id}>{e.name} ({e.platform})</option>)}</select></label><label for="compare-b">Compare with<select id="compare-b">{catalog.map(e=><option value={e.id}>{e.name} ({e.platform})</option>)}</select></label></div><p class="compare-warning" role="status" hidden>These are the same entry. Choose a different pattern to compare.</p><div class="compare-columns" aria-live="polite"><section class="compare-column"><h2>Loading first pattern…</h2><p>Getting the catalog.</p></section><section class="compare-column"><h2>Loading comparison…</h2><p>Getting the catalog.</p></section></div><noscript><p>Comparison needs JavaScript. <a href="/">Browse individual entries</a> for the same information.</p></noscript></section></Layout>

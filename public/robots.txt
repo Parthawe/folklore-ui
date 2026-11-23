@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://folklore-ui.pawar-d-parth.chatgpt.site/sitemap.xml
