@@ -13,9 +13,9 @@ Aliases: soft UI
 
 ## Defining signals
 
-- **Continuous surface** (Visual signal): Signal 1 in this specimen.
-- **Paired soft shadows** (Visual signal): Signal 2 in this specimen.
-- **Inset pressed states** (Visual signal): Signal 3 in this specimen.
+- **Continuous surface** (Visual signal): The background and controls share the same base tone.
+- **Paired soft shadows** (Visual signal): Light and dark shadows make the dial appear raised.
+- **Inset pressed states** (Visual signal): A pressed control appears recessed into the surface.
 
 ## Behavior
 

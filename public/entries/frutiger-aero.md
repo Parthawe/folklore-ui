@@ -13,10 +13,10 @@ Aliases: aero aesthetic, glossy nature tech
 
 ## Defining signals
 
-- **Nature and technology** (Visual signal): Signal 1 in this specimen.
-- **Glossy aqua surfaces** (Visual signal): Signal 2 in this specimen.
-- **Sky blue and grass green** (Visual signal): Signal 3 in this specimen.
-- **Reflections and bubbles** (Visual signal): Signal 4 in this specimen.
+- **Nature and technology** (Visual signal): A green landscape appears inside a technological surface.
+- **Glossy aqua surfaces** (Visual signal): The button uses an aqua-like shine and highlight.
+- **Sky blue and grass green** (Visual signal): Blue sky and green landscape establish the natural palette.
+- **Reflections and bubbles** (Visual signal): Translucent bubbles supply a glossy, reflective motif.
 
 ## Behavior
 
@@ -40,6 +40,6 @@ y2k, glassmorphism
 
 ## Sources
 
-- [CARI aesthetic archive](https://cari.institute/aesthetics)
+- [CARI: Frutiger Aero](https://cari.institute/aesthetics/frutiger-aero)
 
 Updated 2026-11-23. Folklore 1.0.0. Original content licensed MIT.

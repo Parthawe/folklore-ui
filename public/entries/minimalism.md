@@ -13,9 +13,9 @@ Aliases: minimal design
 
 ## Defining signals
 
-- **Limited element count** (Visual signal): Signal 1 in this specimen.
-- **Generous negative space** (Visual signal): Signal 2 in this specimen.
-- **Clear typographic hierarchy** (Visual signal): Signal 3 in this specimen.
+- **Limited element count** (Visual signal): Only a few content and control types compete for attention.
+- **Generous negative space** (Visual signal): Unoccupied space separates the small number of elements.
+- **Clear typographic hierarchy** (Visual signal): Type size and placement establish the reading order.
 
 ## Behavior
 

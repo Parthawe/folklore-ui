@@ -1,0 +1,2 @@
+import {defineConfig} from '@playwright/test';
+export default defineConfig({testDir:'./tests/browser',timeout:30000,retries:0,workers:1,use:{baseURL:process.env.FOLKLORE_TEST_URL||'http://127.0.0.1:4321',viewport:{width:1440,height:1000},colorScheme:'dark',trace:'retain-on-failure'},reporter:[['list'],['json',{outputFile:'artifacts/browser-results.json'}]],outputDir:'artifacts/test-results',webServer:process.env.FOLKLORE_TEST_URL?undefined:{command:'python3 -m http.server 4321 --bind 127.0.0.1 --directory dist',url:'http://127.0.0.1:4321',reuseExistingServer:true}});

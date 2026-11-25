@@ -13,10 +13,10 @@ Aliases: International Typographic Style, Swiss typography
 
 ## Defining signals
 
-- **Systematic grid** (Visual signal): Signal 1 in this specimen.
-- **Asymmetric balance** (Visual signal): Signal 2 in this specimen.
-- **Sans-serif hierarchy** (Visual signal): Signal 3 in this specimen.
-- **Purposeful alignment** (Visual signal): Signal 4 in this specimen.
+- **Systematic grid** (Visual signal): Consistent alignment relates the text and graphic elements.
+- **Asymmetric balance** (Visual signal): Unequal visual weights balance across the composition.
+- **Sans-serif hierarchy** (Visual signal): Sans-serif size and weight establish a direct reading order.
+- **Purposeful alignment** (Visual signal): The lower rule and text share a deliberate alignment.
 
 ## Behavior
 
@@ -40,6 +40,6 @@ minimalism, flat-design
 
 ## Sources
 
-- [Museum für Gestaltung Zürich: graphic design collection](https://museum-gestaltung.ch/en/collection/graphic-design-collection/)
+- [Museum für Gestaltung Zürich: graphic design collection](https://museum-gestaltung.ch/en/graphic-design)
 
 Updated 2026-11-23. Folklore 1.0.0. Original content licensed MIT.

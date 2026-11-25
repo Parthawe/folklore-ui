@@ -13,10 +13,10 @@ Aliases: frosted glass UI
 
 ## Defining signals
 
-- **Translucent surface** (Visual signal): Signal 1 in this specimen.
-- **Backdrop blur** (Visual signal): Signal 2 in this specimen.
-- **Visible background** (Visual signal): Signal 3 in this specimen.
-- **Fine edge highlight** (Visual signal): Signal 4 in this specimen.
+- **Translucent surface** (Visual signal): The foreground surface lets background colors contribute.
+- **Backdrop blur** (Visual signal): Blur softens the scene behind the panel.
+- **Visible background** (Visual signal): Large background forms make the transparency legible.
+- **Fine edge highlight** (Visual signal): A fine light outline distinguishes the material edge.
 
 ## Behavior
 

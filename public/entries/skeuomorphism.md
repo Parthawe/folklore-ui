@@ -13,9 +13,9 @@ Aliases: real-world UI, material imitation
 
 ## Defining signals
 
-- **Physical metaphor** (Visual signal): Signal 1 in this specimen.
-- **Material cues** (Visual signal): Signal 2 in this specimen.
-- **Consistent light and depth** (Visual signal): Signal 3 in this specimen.
+- **Physical metaphor** (Visual signal): The notebook supplies a familiar physical reference.
+- **Material cues** (Visual signal): The binding and paper-like surface suggest construction.
+- **Consistent light and depth** (Visual signal): A consistent light direction gives the button apparent depth.
 
 ## Behavior
 

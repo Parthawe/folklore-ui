@@ -13,9 +13,9 @@ Aliases: flat UI
 
 ## Defining signals
 
-- **Planar fills** (Visual signal): Signal 1 in this specimen.
-- **Simple shapes** (Visual signal): Signal 2 in this specimen.
-- **Little simulated material** (Visual signal): Signal 3 in this specimen.
+- **Planar fills** (Visual signal): Color fills stay planar rather than imitating a material.
+- **Simple shapes** (Visual signal): Basic geometric forms carry the illustration.
+- **Little simulated material** (Visual signal): The button is recognizable without simulated lighting.
 
 ## Behavior
 

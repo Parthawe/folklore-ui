@@ -13,9 +13,9 @@ Aliases: Y2K futurism, millennium aesthetic
 
 ## Defining signals
 
-- **Chrome and synthetic finishes** (Visual signal): Signal 1 in this specimen.
-- **Curved futuristic forms** (Visual signal): Signal 2 in this specimen.
-- **Metallic or icy palette** (Visual signal): Signal 3 in this specimen.
+- **Chrome and synthetic finishes** (Visual signal): Metal-like highlights suggest a synthetic reflective finish.
+- **Curved futuristic forms** (Visual signal): The curved ring and slanted lettering imply a speculative future.
+- **Metallic or icy palette** (Visual signal): Icy blues and silver tones tie the materials together.
 
 ## Behavior
 
@@ -39,6 +39,6 @@ frutiger-aero, skeuomorphism
 
 ## Sources
 
-- [CARI aesthetic archive](https://cari.institute/aesthetics)
+- [CARI aesthetic archive](https://cari.institute/aesthetics/y2k-aesthetic)
 
 Updated 2026-11-23. Folklore 1.0.0. Original content licensed MIT.

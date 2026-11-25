@@ -4,6 +4,7 @@ import {markdown} from '../src/lib/markdown.mjs';
 const skill='plugin/skills/folklore';
 for(const dir of ['public/data','public/entries','public/fonts',`${skill}/references`,`${skill}/scripts`,`${skill}/agents`,'plugin/.codex-plugin']) await mkdir(dir,{recursive:true});
 await copyFile('node_modules/@fontsource/source-sans-3/LICENSE','public/fonts/LICENSE.txt');
+await copyFile('LICENSE',`${skill}/LICENSE`);
 await writeFile('public/data/catalog.json',JSON.stringify(catalog.map(e=>({...e,url:entryPath(e)}))));
 await writeFile(`${skill}/references/catalog.json`,JSON.stringify(catalog,null,2));
 await copyFile('src/lib/search.mjs',`${skill}/scripts/search.mjs`);

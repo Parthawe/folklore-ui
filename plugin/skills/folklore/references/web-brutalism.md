@@ -13,9 +13,9 @@ Aliases: brutalist web, raw HTML look
 
 ## Defining signals
 
-- **Exposed document structure** (Visual signal): Signal 1 in this specimen.
-- **Direct typography** (Visual signal): Signal 2 in this specimen.
-- **Minimal decorative finish** (Visual signal): Signal 3 in this specimen.
+- **Exposed document structure** (Visual signal): Headings, rules, and links expose the document’s structure.
+- **Direct typography** (Visual signal): The type makes little attempt to hide its browser-like character.
+- **Minimal decorative finish** (Visual signal): Controls remain visually direct and minimally decorated.
 
 ## Behavior
 

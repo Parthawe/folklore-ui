@@ -1323,7 +1323,7 @@
       },
       {
         "title": "SwiftUI commands",
-        "url": "https://developer.apple.com/documentation/swiftui/view/commands(content:)"
+        "url": "https://developer.apple.com/documentation/swiftui/scene/commands(content:)"
       }
     ],
     "demo": "menu-bar",
@@ -1720,17 +1720,17 @@
       {
         "name": "Limited element count",
         "api": "Visual signal",
-        "description": "Signal 1 in this specimen."
+        "description": "Only a few content and control types compete for attention."
       },
       {
         "name": "Generous negative space",
         "api": "Visual signal",
-        "description": "Signal 2 in this specimen."
+        "description": "Unoccupied space separates the small number of elements."
       },
       {
         "name": "Clear typographic hierarchy",
         "api": "Visual signal",
-        "description": "Signal 3 in this specimen."
+        "description": "Type size and placement establish the reading order."
       }
     ],
     "prompt": "Create a minimalism visual direction for the current project. Remove competing decoration and secondary content before reducing affordances. Keep a small palette, readable type, and an obvious primary action. Preserve the existing task flow, content, accessible contrast, clear focus, and reduced-motion support.",
@@ -1773,17 +1773,17 @@
       {
         "name": "Planar fills",
         "api": "Visual signal",
-        "description": "Signal 1 in this specimen."
+        "description": "Color fills stay planar rather than imitating a material."
       },
       {
         "name": "Simple shapes",
         "api": "Visual signal",
-        "description": "Signal 2 in this specimen."
+        "description": "Basic geometric forms carry the illustration."
       },
       {
         "name": "Little simulated material",
         "api": "Visual signal",
-        "description": "Signal 3 in this specimen."
+        "description": "The button is recognizable without simulated lighting."
       }
     ],
     "prompt": "Create a flat design visual direction for the current project. Use solid fills and clear grouping. Make clickable controls recognizable through placement, shape, labeling, and focus states. Preserve the existing task flow, content, accessible contrast, clear focus, and reduced-motion support.",
@@ -1827,17 +1827,17 @@
       {
         "name": "Physical metaphor",
         "api": "Visual signal",
-        "description": "Signal 1 in this specimen."
+        "description": "The notebook supplies a familiar physical reference."
       },
       {
         "name": "Material cues",
         "api": "Visual signal",
-        "description": "Signal 2 in this specimen."
+        "description": "The binding and paper-like surface suggest construction."
       },
       {
         "name": "Consistent light and depth",
         "api": "Visual signal",
-        "description": "Signal 3 in this specimen."
+        "description": "A consistent light direction gives the button apparent depth."
       }
     ],
     "prompt": "Create a skeuomorphism visual direction for the current project. Choose one useful physical metaphor. Keep its lighting and controls coherent while preserving text clarity and familiar keyboard behavior. Preserve the existing task flow, content, accessible contrast, clear focus, and reduced-motion support.",
@@ -1884,17 +1884,17 @@
       {
         "name": "Continuous surface",
         "api": "Visual signal",
-        "description": "Signal 1 in this specimen."
+        "description": "The background and controls share the same base tone."
       },
       {
         "name": "Paired soft shadows",
         "api": "Visual signal",
-        "description": "Signal 2 in this specimen."
+        "description": "Light and dark shadows make the dial appear raised."
       },
       {
         "name": "Inset pressed states",
         "api": "Visual signal",
-        "description": "Signal 3 in this specimen."
+        "description": "A pressed control appears recessed into the surface."
       }
     ],
     "prompt": "Create a neumorphism visual direction for the current project. Use a shared surface tone and coherent directional shadows. Give controls visible boundaries and high-contrast labels instead of relying on subtle shadows alone. Preserve the existing task flow, content, accessible contrast, clear focus, and reduced-motion support.",
@@ -1943,22 +1943,22 @@
       {
         "name": "Translucent surface",
         "api": "Visual signal",
-        "description": "Signal 1 in this specimen."
+        "description": "The foreground surface lets background colors contribute."
       },
       {
         "name": "Backdrop blur",
         "api": "Visual signal",
-        "description": "Signal 2 in this specimen."
+        "description": "Blur softens the scene behind the panel."
       },
       {
         "name": "Visible background",
         "api": "Visual signal",
-        "description": "Signal 3 in this specimen."
+        "description": "Large background forms make the transparency legible."
       },
       {
         "name": "Fine edge highlight",
         "api": "Visual signal",
-        "description": "Signal 4 in this specimen."
+        "description": "A fine light outline distinguishes the material edge."
       }
     ],
     "prompt": "Create a glassmorphism visual direction for the current project. Use a background with enough variation to reveal the material. Keep text on a stable readable surface and supply an opaque fallback where transparency is unsupported or reduced. Preserve the existing task flow, content, accessible contrast, clear focus, and reduced-motion support.",
@@ -2002,17 +2002,17 @@
       {
         "name": "Exposed document structure",
         "api": "Visual signal",
-        "description": "Signal 1 in this specimen."
+        "description": "Headings, rules, and links expose the document’s structure."
       },
       {
         "name": "Direct typography",
         "api": "Visual signal",
-        "description": "Signal 2 in this specimen."
+        "description": "The type makes little attempt to hide its browser-like character."
       },
       {
         "name": "Minimal decorative finish",
         "api": "Visual signal",
-        "description": "Signal 3 in this specimen."
+        "description": "Controls remain visually direct and minimally decorated."
       }
     ],
     "prompt": "Create a web brutalism visual direction for the current project. Keep the document hierarchy visible and controls honest. Use deliberate typography and direct links without sacrificing responsive behavior or accessibility. Preserve the existing task flow, content, accessible contrast, clear focus, and reduced-motion support.",
@@ -2057,22 +2057,22 @@
       {
         "name": "Heavy outlines",
         "api": "Visual signal",
-        "description": "Signal 1 in this specimen."
+        "description": "Thick, consistent outlines define the control boundaries."
       },
       {
         "name": "Flat saturated color",
         "api": "Visual signal",
-        "description": "Signal 2 in this specimen."
+        "description": "Color appears in solid blocks rather than realistic shading."
       },
       {
         "name": "Hard offset shadow",
         "api": "Visual signal",
-        "description": "Signal 3 in this specimen."
+        "description": "The control casts a crisp displaced shadow."
       },
       {
         "name": "Blunt typography",
         "api": "Visual signal",
-        "description": "Signal 4 in this specimen."
+        "description": "Heavy, direct lettering gives the composition its voice."
       }
     ],
     "prompt": "Create a neobrutalism visual direction for the current project. Use a small palette of solid colors, consistent thick outlines, and hard shadows. Keep form controls and focus clearly distinguishable from graphic decoration. Preserve the existing task flow, content, accessible contrast, clear focus, and reduced-motion support.",
@@ -2107,7 +2107,7 @@
     "sources": [
       {
         "title": "CARI aesthetic archive",
-        "url": "https://cari.institute/aesthetics"
+        "url": "https://cari.institute/aesthetics/y2k-aesthetic"
       }
     ],
     "demo": "y2k",
@@ -2116,17 +2116,17 @@
       {
         "name": "Chrome and synthetic finishes",
         "api": "Visual signal",
-        "description": "Signal 1 in this specimen."
+        "description": "Metal-like highlights suggest a synthetic reflective finish."
       },
       {
         "name": "Curved futuristic forms",
         "api": "Visual signal",
-        "description": "Signal 2 in this specimen."
+        "description": "The curved ring and slanted lettering imply a speculative future."
       },
       {
         "name": "Metallic or icy palette",
         "api": "Visual signal",
-        "description": "Signal 3 in this specimen."
+        "description": "Icy blues and silver tones tie the materials together."
       }
     ],
     "prompt": "Create a y2k digital visual direction for the current project. Select a coherent subset of chrome, translucent plastic, and curved futuristic shapes. Keep decorative display type separate from task text. Preserve the existing task flow, content, accessible contrast, clear focus, and reduced-motion support.",
@@ -2161,8 +2161,8 @@
     ],
     "sources": [
       {
-        "title": "CARI aesthetic archive",
-        "url": "https://cari.institute/aesthetics"
+        "title": "CARI: Frutiger Aero",
+        "url": "https://cari.institute/aesthetics/frutiger-aero"
       }
     ],
     "demo": "frutiger-aero",
@@ -2171,22 +2171,22 @@
       {
         "name": "Nature and technology",
         "api": "Visual signal",
-        "description": "Signal 1 in this specimen."
+        "description": "A green landscape appears inside a technological surface."
       },
       {
         "name": "Glossy aqua surfaces",
         "api": "Visual signal",
-        "description": "Signal 2 in this specimen."
+        "description": "The button uses an aqua-like shine and highlight."
       },
       {
         "name": "Sky blue and grass green",
         "api": "Visual signal",
-        "description": "Signal 3 in this specimen."
+        "description": "Blue sky and green landscape establish the natural palette."
       },
       {
         "name": "Reflections and bubbles",
         "api": "Visual signal",
-        "description": "Signal 4 in this specimen."
+        "description": "Translucent bubbles supply a glossy, reflective motif."
       }
     ],
     "prompt": "Create a frutiger aero visual direction for the current project. Combine recognizable natural cues with glossy technological surfaces. Give content a stable reading area and avoid treating every blue gradient as sufficient evidence of this style. Preserve the existing task flow, content, accessible contrast, clear focus, and reduced-motion support.",
@@ -2222,7 +2222,7 @@
     "sources": [
       {
         "title": "Museum für Gestaltung Zürich: graphic design collection",
-        "url": "https://museum-gestaltung.ch/en/collection/graphic-design-collection/"
+        "url": "https://museum-gestaltung.ch/en/graphic-design"
       }
     ],
     "demo": "swiss-style",
@@ -2231,22 +2231,22 @@
       {
         "name": "Systematic grid",
         "api": "Visual signal",
-        "description": "Signal 1 in this specimen."
+        "description": "Consistent alignment relates the text and graphic elements."
       },
       {
         "name": "Asymmetric balance",
         "api": "Visual signal",
-        "description": "Signal 2 in this specimen."
+        "description": "Unequal visual weights balance across the composition."
       },
       {
         "name": "Sans-serif hierarchy",
         "api": "Visual signal",
-        "description": "Signal 3 in this specimen."
+        "description": "Sans-serif size and weight establish a direct reading order."
       },
       {
         "name": "Purposeful alignment",
         "api": "Visual signal",
-        "description": "Signal 4 in this specimen."
+        "description": "The lower rule and text share a deliberate alignment."
       }
     ],
     "prompt": "Create a swiss style visual direction for the current project. Build an explicit grid and type hierarchy. Use asymmetric placement with consistent alignment, restrained color, and enough space for reading. Preserve the existing task flow, content, accessible contrast, clear focus, and reduced-motion support.",

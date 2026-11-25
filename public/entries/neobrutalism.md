@@ -13,10 +13,10 @@ Aliases: neo-brutalism, neo brutalist
 
 ## Defining signals
 
-- **Heavy outlines** (Visual signal): Signal 1 in this specimen.
-- **Flat saturated color** (Visual signal): Signal 2 in this specimen.
-- **Hard offset shadow** (Visual signal): Signal 3 in this specimen.
-- **Blunt typography** (Visual signal): Signal 4 in this specimen.
+- **Heavy outlines** (Visual signal): Thick, consistent outlines define the control boundaries.
+- **Flat saturated color** (Visual signal): Color appears in solid blocks rather than realistic shading.
+- **Hard offset shadow** (Visual signal): The control casts a crisp displaced shadow.
+- **Blunt typography** (Visual signal): Heavy, direct lettering gives the composition its voice.
 
 ## Behavior
 

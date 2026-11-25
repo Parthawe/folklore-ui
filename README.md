@@ -21,6 +21,8 @@ npm test
 npm run check
 npm run release
 npm run build
+npx playwright install chromium
+npm run test:browser
 ```
 
 `npm run release` creates versioned ZIPs in public/downloads. Run it before a production build. `npm run build` regenerates the public catalog, Markdown entries, and bundled skill references. Astro emits the static website to dist.
