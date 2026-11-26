@@ -1,59 +1,59 @@
 ---
 name: Folklore
-description: A working desk for naming and inspecting interface patterns.
+description: A dark specimen desk for naming and inspecting interface patterns.
 colors:
-  forest: "#285e4c"
-  chalk: "#f1f3f0"
-  surface: "#fafbf8"
-  ink: "#202722"
-  muted: "#5d685f"
-  line: "#ced5cc"
+  periwinkle: "#b7c5ff"
+  canvas: "#111110"
+  surface: "#191918"
+  ink: "#eeece6"
+  muted: "#aaa9a3"
+  line: "#353532"
 typography:
   display:
     fontFamily: "Bodoni Moda, serif"
-    fontWeight: 500
-    fontSize: "clamp(40px, 4.2vw, 63px)"
-    lineHeight: 1.13
-    letterSpacing: "-.035em"
+    fontWeight: 400
+    fontSize: "clamp(54px, 5.4vw, 78px)"
+    lineHeight: 1.04
+    letterSpacing: "-.055em"
   body:
     fontFamily: "Work Sans, sans-serif"
     fontSize: "14px"
     lineHeight: 1.7
 rounded:
-  control: "3px"
-  workspace: "5px"
+  control: "8px"
+  specimen: "16px"
 ---
 
 # Design System: Folklore
 
 ## Overview
 
-The user selected an interactive specimen desk to replace the earlier editorial card library. The working example carries the page. A compact index supports browsing; an anatomy inspector connects names to component behavior.
+The user requested the visual language of designwhich.works on 26 November 2026. The implemented system pairs its dark, warm canvas and delicate display type with Folklore’s working specimen desk. The reference informs composition, spacing, contrast, and navigation; its portfolio content, commercial claims, proprietary fonts, and media are not included.
 
 ## Colors
 
-Forest marks selected controls and links. Chalk and near-white surfaces separate navigation from the active workspace. Ink carries primary text; muted green-gray carries descriptions. Thin gray-green rules divide regions. Dark mode switches the shell to forest surfaces with pale text and a lime accent. Specimens retain their own illustrative palettes.
+Warm near-black forms the default canvas. Ivory carries headings and active text. Warm gray carries descriptions; pale periwinkle identifies API symbols and inspectable states. Thin neutral rules separate functional regions. Light mode uses a warm paper canvas, dark ink, and a deeper blue accent. Style specimens keep the palettes needed to demonstrate their subject.
 
 ## Typography
 
-Bodoni Moda 500 identifies the brand and selected specimen. Work Sans carries search, navigation, descriptions, and controls. The specimen name scales from 40 to 63px; the mobile name is 48px. Desktop descriptions are 14px with 1.7 line height. API symbols use the existing system monospace stack.
+Bodoni Moda 400 provides delicate display lettering. The main introduction scales from 54 to 78px on desktop. The selected specimen uses 38–55px. Work Sans carries controls and explanations. Primary search is 16px on desktop and 14px on phones. Most supporting UI is 12–14px; the small anatomy number is 11px. Code uses the system monospace stack.
 
 ## Layout
 
-The desktop workspace has a 235px index, flexible specimen, and 295px inspector. Outer padding is 40px. At 900px the inspector moves below the specimen. At 640px the index becomes a horizontal scroll strip and all panels stack. Examples remain interactive in bounded iframes. Long lists scroll independently on desktop.
+A 96px desktop masthead leads into a two-column introduction. Search spans the available width above the specimen desk. The desk has a 206px index, flexible example, and 280px inspector separated by 30px gaps. Its maximum outer width is 1520px with 42px side padding. At 980px the inspector moves below the specimen. At 700px all panels stack, side padding becomes 22px, and the index scrolls horizontally. The phone introduction drops the duplicate Codex link and keeps search examples in one scrolling row.
 
 ## Elevation & Depth
 
-The shell uses borders and surface tones. Demonstrations may use shadows or blur when these explain the pattern itself. Avoid adding decorative depth to the surrounding desk.
+The surrounding interface uses tonal surfaces and thin borders. Shadows and blur belong inside live demonstrations when they explain layering. The default modal is an ivory surface on a graphite demo workspace; its shadow and scrim show which surface is active.
 
 ## Shapes
 
-Controls use 3px corners and the workspace uses 5px corners. Fine rules organize dense information. Anatomy numbers are circular markers.
+Navigation uses an 11px framed group with 7px selected items. Search uses 12px corners. The live canvas uses 16px corners, reduced to 14px on phones. These shapes separate navigation, input, and the interactive example.
 
 ## Components
 
-Search accepts everyday descriptions and ranks entries locally. Selecting anatomy sends a message to the live specimen and updates the readout. The inspector switches between anatomy and a copyable agent brief. Save state persists locally and updates the header count. Reset restores the selected specimen. Empty results and catalog-load failure have explicit messages. Theme preference persists locally. Reduced-motion preferences disable animation through the global stylesheet.
+Search ranks the local catalog from everyday descriptions. Example queries are working buttons. Results retain input focus when an iframe opens a modal, and the selected entry remains visible within its own scroll rail. Anatomy selection updates the specimen and readout. The inspector switches between anatomy and copyable build/debug briefs. Saved entries and theme preference persist locally. Empty results, fetch failure, clipboard failure, and blocked storage have explicit feedback. Reduced-motion preferences disable loading animation and control transitions.
 
 ## Do's and Don'ts
 
-Do preserve the relationship between a name, its parts, and its working example. Do keep source attribution next to the inspector. Don't restore the rejected wall of preview cards or oversized marketing introduction. Don't apply the shell palette to a specimen whose subject requires its own visual style.
+Do keep each pattern beside its anatomy and source. Do make sample interactions clearly identifiable as demonstrations. Do use the reference’s contrast and framing while preserving Folklore’s product task. Don't restore small 9–11px action labels, the sidebar-constrained search field, or repeated marketing slogans. Don't recolor style specimens into the shell palette.

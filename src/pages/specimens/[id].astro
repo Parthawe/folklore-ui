@@ -8,4 +8,23 @@ import '../../styles/global.css';
 export function getStaticPaths(){return catalog.map(entry=>({params:{id:entry.id},props:{entry}}));}
 const {entry}=Astro.props as {entry:Entry};
 ---
-<!doctype html><html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><meta name="robots" content="noindex"/><title>{entry.name} specimen — Folklore</title></head><body class="specimen-host"><main aria-label={`${entry.name} example`}><Specimen entry={entry}/></main><div hidden>{entry.anatomy.map((p,i)=><button data-part={i}><span><strong>{p.name}</strong><span>{p.description}</span></span></button>)}<p class="part-readout"></p></div><script>import '../../scripts/app';</script><style is:global>.specimen-host{font-family:Work Sans,sans-serif;margin:0;background:#e7ebe8;height:100vh;overflow:hidden}.specimen-host>main{height:100%;width:100%}.specimen-host .overlay-card[open]:not(:modal){position:absolute;inset:50% auto auto 50%;margin:0;transform:translate(-50%,-50%)}.specimen-host .demo-drawer .overlay-card[open]:not(:modal){inset:0 0 0 auto;transform:none}.specimen-host .demo-sheet .overlay-card[open]:not(:modal){inset:auto 0 0;transform:none}.specimen-host .overlay-card:modal{max-width:85%;width:350px}.specimen-host .specimen-feedback{font-size:13px}.specimen-host [data-demo=scrim][data-inspect="0"] dialog::backdrop{background:#1e342fc2}.specimen-host [data-demo=scrim][data-inspect="1"] dialog::backdrop{backdrop-filter:blur(8px)}.specimen-host [data-demo=scrim][data-inspect="2"] dialog{outline:3px solid #c4dc70;outline-offset:8px}</style></body></html>
+<!doctype html><html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><meta name="robots" content="noindex"/><title>{entry.name} specimen — Folklore</title></head><body class="specimen-host"><main aria-label={`${entry.name} example`}><Specimen entry={entry}/></main><div hidden>{entry.anatomy.map((p,i)=><button data-part={i}><span><strong>{p.name}</strong><span>{p.description}</span></span></button>)}<p class="part-readout"></p></div><script>import '../../scripts/app';</script><style is:global>.specimen-host{font-family:Work Sans,sans-serif;margin:0;background:#e7ebe8;height:100vh;overflow:hidden}.specimen-host>main{height:100%;width:100%}.specimen-host .overlay-card[open]:not(:modal){position:absolute;inset:50% auto auto 50%;margin:0;transform:translate(-50%,-50%)}.specimen-host .demo-drawer .overlay-card[open]:not(:modal){inset:0 0 0 auto;transform:none}.specimen-host .demo-sheet .overlay-card[open]:not(:modal){inset:auto 0 0;transform:none}.specimen-host .overlay-card:modal{max-width:85%;width:350px}.specimen-host .specimen-feedback{font-size:13px}.specimen-host [data-demo=scrim][data-inspect="0"] dialog::backdrop{background:#1e342fc2}.specimen-host [data-demo=scrim][data-inspect="1"] dialog::backdrop{backdrop-filter:blur(8px)}.specimen-host [data-demo=scrim][data-inspect="2"] dialog{outline:3px solid #c4dc70;outline-offset:8px}
+.specimen-host .overlay-workspace{background:#272726;color:#e8e6df}
+.specimen-host .sample-top{background:#30302e;border-color:#42423f}
+.specimen-host .sample-sidebar{color:#bdbbb3;border-color:#42423f}
+.specimen-host .sample-content h3{color:#d5d3cb}
+.specimen-host .sample-content small{color:#bdbbb3}
+.specimen-host .sample-line,.specimen-host .sample-lines i{background:#55554f}
+.specimen-host .overlay-card{border-color:#d5d2c9;background:#f4f2eb;color:#252520;border-radius:14px;padding:27px;box-shadow:0 24px 70px #0003}
+.specimen-host .overlay-card::backdrop{background:#11111070;backdrop-filter:blur(2px)}
+.specimen-host .overlay-card p{color:#62615b;font-size:14px;line-height:1.7}
+.specimen-host .overlay-card h3{font-size:23px;letter-spacing:-.04em;line-height:1.3}
+.specimen-host .demo-caption{color:#62615b;letter-spacing:0;font-size:12px}
+.specimen-host .demo-actions button{border-radius:7px;background:transparent;border-color:#cbc8c0;color:#292925;font-size:13px;padding:10px 14px}
+.specimen-host .demo-actions .demo-primary{background:#4058c6;color:#fff;border-color:#4058c6}
+.specimen-host .demo-drawer .overlay-card{border-radius:0}
+.specimen-host .demo-sheet .overlay-card{border-radius:14px 14px 0 0}
+.specimen-host .demo-popover .overlay-card:before,.specimen-host .demo-mac-popover .overlay-card:before{background:#f4f2eb}
+.specimen-host [data-demo=scrim][data-inspect="0"] dialog::backdrop{background:#050505c2}
+.specimen-host [data-demo=scrim][data-inspect="2"] dialog{outline-color:#b7c5ff}
+</style></body></html>

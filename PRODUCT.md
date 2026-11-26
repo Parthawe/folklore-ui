@@ -21,7 +21,7 @@ Browse the public website or install the offline Codex skill/plugin. One catalog
 Thirty elements across web and macOS, ten styles, text search, comparisons, local bookmarks, Markdown export, offline lookup scripts. Browser macOS specimens are simulations. Source and site are public. MIT license for original work.
 
 ## Brand Commitments
-Folklore is the product name. Original identity and content; Name That UI supplies the reference workflow. The first visual design was rejected on 25 November 2026. The user chose an interactive specimen desk with one large working example, clickable anatomy, and a compact searchable index. Hosting belongs on GitHub Pages, not Sites.
+Folklore is the product name. Original identity and content; Name That UI supplies the reference workflow. The first visual design was rejected on 25 November 2026. The user chose an interactive specimen desk with one large working example, clickable anatomy, and a compact searchable index. Hosting belongs on GitHub Pages, not Sites. On 26 November 2026, the user requested a screen audit and the dark editorial visual language of designwhich.works. Retain the specimen desk while adapting typography, framing, spacing, and navigation to that reference.
 
 ## Evidence on Hand
 The approved plan and live reference workflow. API claims require primary documentation. No customer claims, endorsements, or usage metrics.

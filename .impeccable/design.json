@@ -1,1 +1,43 @@
-{"schemaVersion":2,"generatedAt":"2026-11-26T05:10:00Z","title":"Design System: Folklore","extensions":{"breakpoints":[{"name":"stack-inspector","value":"900px"},{"name":"mobile","value":"640px"}],"motion":[{"name":"control-transition","value":".15s","purpose":"Color and border state changes; respect reduced motion."}]},"components":[],"narrative":{"northStar":"Interactive specimen desk","overview":"One working specimen connects everyday descriptions to precise anatomy.","keyCharacteristics":["Bodoni specimen names","Work Sans controls","Forest and chalk shell","Live specimen beside anatomy"],"rules":[],"dos":["Keep specimens interactive."],"donts":["Do not restore the rejected preview-card wall."]}}
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-26T19:00:00Z",
+  "title": "Design System: Folklore",
+  "extensions": {
+    "breakpoints": [
+      {
+        "name": "stack-inspector",
+        "value": "980px"
+      },
+      {
+        "name": "mobile",
+        "value": "700px"
+      }
+    ],
+    "motion": [
+      {
+        "name": "control-transition",
+        "value": ".15s",
+        "purpose": "Color and border state changes; respect reduced motion."
+      }
+    ]
+  },
+  "components": [],
+  "narrative": {
+    "northStar": "Dark editorial specimen desk",
+    "overview": "A warm dark canvas and delicate display type frame the working specimen, its searchable vocabulary, and its named parts.",
+    "keyCharacteristics": [
+      "Warm near-black canvas",
+      "Bodoni Moda 400 display",
+      "Full-width descriptive search",
+      "Live specimen beside anatomy"
+    ],
+    "rules": [],
+    "dos": [
+      "Keep specimens interactive."
+    ],
+    "donts": [
+      "Do not constrain search to the index rail.",
+      "Do not restore repeated slogans or tiny action labels."
+    ]
+  }
+}
