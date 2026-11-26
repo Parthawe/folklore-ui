@@ -42,4 +42,4 @@ minimalism, flat-design
 
 - [Museum für Gestaltung Zürich: graphic design collection](https://museum-gestaltung.ch/en/graphic-design)
 
-Updated 2026-11-23. Folklore 1.0.0. Original content licensed MIT.
+Updated 2026-11-23. Folklore 1.1.0. Original content licensed MIT.

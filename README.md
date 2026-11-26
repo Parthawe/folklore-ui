@@ -71,3 +71,14 @@ GitHub Pages hosts the website at `https://parthawe.github.io/folklore-ui/`. Ast
 Search runs locally. Bookmarks and theme preferences use browser localStorage. Queries appear in shareable URLs. There is no application telemetry, tracking, account system, or screenshot upload. Provider infrastructure may log ordinary network requests. The skill contains no network calls.
 
 Original work is MIT licensed. Source Sans 3 is SIL OFL 1.1. See LICENSE and THIRD_PARTY_NOTICES.md. External documentation remains under its authors' licenses.
+
+## Screen design audit
+
+The Folklore plugin includes `$design-slop-audit`. Give it a screenshot, URL, or current project to review generic design choices, hierarchy, copy, and relevant interaction states. Findings cite evidence and propose specific fixes; they do not claim to identify AI authorship.
+
+After an existing installation, refresh the marketplace and install the current version:
+
+```sh
+codex plugin marketplace upgrade folklore-local
+codex plugin add folklore@folklore-local
+```

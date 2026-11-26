@@ -42,4 +42,4 @@ web-brutalism, flat-design
 
 - [Gumroad: a shipping visual specimen](https://gumroad.com/)
 
-Updated 2026-11-23. Folklore 1.0.0. Original content licensed MIT.
+Updated 2026-11-23. Folklore 1.1.0. Original content licensed MIT.

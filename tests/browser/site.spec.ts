@@ -59,5 +59,5 @@ test('desktop/mobile fit, accessibility, downloads, and screenshots',async({page
  }
  await page.goto('/folklore-ui/');await page.getByRole('button',{name:'Switch color theme'}).click();await expect(page.locator('html')).toHaveAttribute('data-theme','dark');await page.screenshot({path:'artifacts/mobile-light.png'});await page.getByRole('button',{name:'Switch color theme'}).click();await expect(page.locator('html')).toHaveAttribute('data-theme','light');
  expect(findings).toEqual([]);
- for(const path of ['/downloads/folklore-plugin-1.0.0.zip','/downloads/folklore-skill-1.0.0.zip','/privacy/','/license/','/entries/dialog.md'])expect((await request.get(withBase(path))).ok()).toBeTruthy();
+ for(const path of ['/downloads/folklore-plugin-1.1.0.zip','/downloads/folklore-skill-1.1.0.zip','/privacy/','/license/','/entries/dialog.md'])expect((await request.get(withBase(path))).ok()).toBeTruthy();
 });

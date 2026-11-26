@@ -41,4 +41,4 @@ neumorphism, flat-design
 
 - [Original comparative interface study](https://www.di.fc.ul.pt/~jguerreiro/publications/bit_urbano2020.pdf)
 
-Updated 2026-11-23. Folklore 1.0.0. Original content licensed MIT.
+Updated 2026-11-23. Folklore 1.1.0. Original content licensed MIT.

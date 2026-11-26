@@ -40,4 +40,4 @@ status-item, toast
 
 - [NSDockTile badgeLabel](https://developer.apple.com/documentation/appkit/nsdocktile/badgelabel)
 
-Updated 2026-11-23. Folklore 1.0.0. Original content licensed MIT.
+Updated 2026-11-23. Folklore 1.1.0. Original content licensed MIT.

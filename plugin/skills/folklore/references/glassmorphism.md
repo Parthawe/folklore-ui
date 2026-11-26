@@ -43,4 +43,4 @@ vibrancy, neumorphism, frutiger-aero
 - [Malewicz: first-person style explanation](https://www.youtube.com/watch?v=PFADyVTX97w)
 - [CSS backdrop-filter](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/backdrop-filter)
 
-Updated 2026-11-23. Folklore 1.0.0. Original content licensed MIT.
+Updated 2026-11-23. Folklore 1.1.0. Original content licensed MIT.

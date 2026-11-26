@@ -42,4 +42,4 @@ dialog, sheet, popover
 - [Dialog semantics for modal implementations](https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/)
 - [CSS fixed positioning](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/position)
 
-Updated 2026-11-23. Folklore 1.0.0. Original content licensed MIT.
+Updated 2026-11-23. Folklore 1.1.0. Original content licensed MIT.

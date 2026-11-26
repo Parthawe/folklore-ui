@@ -43,4 +43,4 @@ toolbar, sidebar, mac-sheet
 - [NSWindow](https://developer.apple.com/documentation/appkit/nswindow)
 - [WindowGroup](https://developer.apple.com/documentation/swiftui/windowgroup)
 
-Updated 2026-11-23. Folklore 1.0.0. Original content licensed MIT.
+Updated 2026-11-23. Folklore 1.1.0. Original content licensed MIT.

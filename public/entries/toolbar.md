@@ -43,4 +43,4 @@ window, inspector, segmented-control
 - [NSToolbar](https://developer.apple.com/documentation/appkit/nstoolbar)
 - [SwiftUI toolbar](https://developer.apple.com/documentation/swiftui/view/toolbar(content:))
 
-Updated 2026-11-23. Folklore 1.0.0. Original content licensed MIT.
+Updated 2026-11-23. Folklore 1.1.0. Original content licensed MIT.
