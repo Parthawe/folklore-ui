@@ -10,10 +10,13 @@
     "check": "astro check",
     "release": "node scripts/package.mjs",
     "validate": "node scripts/validate.mjs",
-    "test:browser": "playwright test"
+    "test:browser": "playwright test",
+    "preview": "astro preview --host 127.0.0.1"
   },
   "dependencies": {
+    "@fontsource/bodoni-moda": "^5.3.0",
     "@fontsource/source-sans-3": "^5.2.5",
+    "@fontsource/work-sans": "^5.3.0",
     "astro": "^7.4.13"
   },
   "devDependencies": {

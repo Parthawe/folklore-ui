@@ -2,7 +2,7 @@
 
 A field guide to interfaces. Describe an element or visual style, learn its name and parts, and take a useful brief into your coding agent.
 
-**Website:** https://folklore-ui.pawar-d-parth.chatgpt.site
+**Website:** https://parthawe.github.io/folklore-ui
 
 The initial catalog contains 20 web elements, 10 macOS elements, and 10 visual styles. The site and offline Codex skill are generated from one content source. No API key, database, or model service is required.
 
@@ -64,7 +64,7 @@ Run validation, tests, type checks, release packaging, and the build. Test the m
 
 ## Publication
 
-`.openai/hosting.json` records the Sites project and static output. Deploy from an exact pushed source commit and its built artifact through the Sites workflow. GitHub Actions validates pushes and pull requests, and packages download archives on version tags. Website deployment is a separate explicit operation; GitHub releases do not silently deploy it.
+GitHub Pages hosts the website at `https://parthawe.github.io/folklore-ui/`. Astro’s `/folklore-ui` base and the shared URL helper keep links, scripts, search, and downloads inside that project path. GitHub Actions validates pushes and pull requests, deploys passing main-branch builds to Pages, and packages download archives on version tags. The former Sites deployment is retired after the Pages migration is verified.
 
 ## Privacy and license
 

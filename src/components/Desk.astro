@@ -1,0 +1,33 @@
+---
+import {catalog,entryPath} from '../../content/catalog.mjs';
+import {withBase} from '../lib/paths.mjs';
+import type {Entry} from '../lib/types';
+const {kind='element'}=Astro.props;
+const entries=(catalog as Entry[]).filter(e=>e.kind===kind).sort((a,b)=>a.name.localeCompare(b.name));
+const initial=entries.find(e=>e.id===(kind==='style'?'glassmorphism':'scrim'))!;
+---
+<div class="specimen-desk" data-desk data-kind={kind} data-initial={initial.id}>
+  <div class="desk-intro"><div><h1>{kind==='style'?'See the style. Know the signals.':'The thing you mean. The name you need.'}</h1><p>{kind==='style'?'Explore a visual language, one decision at a time.':'Find it. Take it apart. Build it with the right words.'}</p></div><a href={withBase('/install/')}>Works inside Codex, too <span>Offline skill · No API key</span></a></div>
+  <div class="desk-workspace">
+    <aside class="desk-index" aria-label="Pattern index"><div class="desk-search"><label class="sr-only" for="desk-query">Describe the {kind==='style'?'visual style':'UI element'}</label><svg width="18" height="18" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="8.5" cy="8.5" r="5.5"/><path d="m13 13 5 5"/></svg><input id="desk-query" type="search" placeholder={kind==='style'?'Describe the look…':'Describe it badly…'} autocomplete="off"/><kbd>⌘ K</kbd></div>
+      <div class="desk-index-tools"><span data-desk-count>{entries.length} {kind==='style'?'styles':'elements'}</span>{kind==='element'&&<label class="sr-only" for="desk-platform">Platform</label>}{kind==='element'&&<select id="desk-platform"><option value="all">All platforms</option><option value="web">Web</option><option value="macos">macOS</option></select>}</div>
+      <div class="desk-entry-list">{entries.map(e=><button class="desk-entry" data-desk-entry={e.id} aria-pressed={e.id===initial.id?'true':'false'}><span class:list={['entry-symbol',`symbol-${e.kind==='style'?'style':e.platform}`]} aria-hidden="true"><i></i></span><span><strong>{e.name}</strong><small>{e.kind==='style'?e.status:e.platform==='macos'?'macOS':'Web'}</small></span><span class="entry-selection-mark" aria-hidden="true"></span></button>)}</div>
+      <div class="desk-no-match" hidden><strong>No close match.</strong><p>Try its position, behavior, or material.</p><button data-desk-clear>Clear search</button></div><p class="desk-search-status" role="status"></p>
+      <div class="desk-index-foot"><a href={withBase('/saved/')}>Your saved entries</a><a href={withBase('/compare/')}>Compare two patterns</a></div>
+    </aside>
+    <section class="desk-stage" aria-label="Selected specimen"><div class="desk-stage-heading"><div><h2 data-desk-name>{initial.name}</h2><span data-desk-platform>{initial.platform==='style'?initial.status:initial.platform==='macos'?'macOS':'Web'}</span></div><button class="desk-save" data-desk-save aria-pressed="false" aria-label="Save selected entry"><svg width="19" height="21" viewBox="0 0 20 22" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M4 3h12v16l-6-4-6 4V3Z"/></svg><span>Save</span></button></div>
+      <p class="desk-description" data-desk-description>{initial.description}</p>
+      <div class="desk-canvas"><iframe id="desk-frame" src={withBase(`/specimens/${initial.id}/?open=1`)} title={`${initial.name} working specimen`} loading="eager"></iframe><div class="desk-frame-loading" hidden aria-hidden="true"><span></span><span></span><span></span></div></div>
+      <div class="desk-canvas-controls"><span data-desk-demo-label>{initial.platform==='macos'?'Browser simulation':'Live specimen. Go ahead, try it.'}</span><button data-desk-reset><svg width="15" height="15" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M3 6a5 5 0 1 1 0 5M3 2v4h4"/></svg>Reset</button></div>
+      <div class="desk-selected-part" aria-live="polite"><span class="part-crosshair" aria-hidden="true"></span><p data-desk-readout>Select a part on the right to inspect it in the specimen.</p></div>
+      <div class="desk-entry-links"><a data-desk-full href={withBase(entryPath(initial))}>Read the complete entry</a><button data-desk-share>Copy link to this view</button></div>
+    </section>
+    <aside class="desk-inspector" aria-label="Anatomy and agent brief"><div class="inspector-switch" role="group" aria-label="Inspector view"><button data-inspector-view="anatomy" aria-pressed="true">{kind==='style'?'Signals':'Anatomy'}</button><button data-inspector-view="brief" aria-pressed="false">Agent brief</button></div>
+      <div data-inspector-panel="anatomy"><div class="inspector-section-head"><h3>{kind==='style'?'What makes the look':'Every part, named'}</h3><p>{kind==='style'?'A combination of decisions. Select a signal to see it.':'Select a part. See where it belongs.'}</p></div><div class="desk-parts">{initial.anatomy.map((p,i)=><button data-desk-part={i} aria-pressed="false"><span class="part-number">{i+1}</span><span><strong>{p.name}</strong><code>{p.api}</code><span>{p.description}</span></span></button>)}</div><div class="desk-aliases"><h3>You might call it…</h3><div data-desk-phrases>{initial.phrases.map(p=><button data-desk-query={p}>“{p}”</button>)}</div></div></div>
+      <div data-inspector-panel="brief" hidden><div class="inspector-section-head"><h3>Take the idea into code.</h3><p>Adapt this brief to your project’s components and framework.</p></div><p class="desk-prompt" data-desk-prompt>{initial.prompt}</p><button class="desk-copy-brief" data-desk-copy="brief">Copy build brief</button><h3 class="desk-debug-title">Something not working?</h3><p class="desk-debug" data-desk-debug>{initial.debug}</p><button data-desk-copy="debug">Copy debug prompt</button></div>
+      <div class="desk-source"><span>Grounded in documentation.</span><a data-desk-source href={initial.sources[0].url} target="_blank" rel="noreferrer">{initial.sources[0].title}</a></div>
+    </aside>
+  </div>
+  <div class="desk-bottom-line"><span>40 entries. A shared vocabulary.</span><a href="https://github.com/Parthawe/folklore-ui">Open source on GitHub</a><a href={withBase('/install/')}>Install Folklore</a></div>
+</div>
+<script>import '../scripts/desk';</script>
