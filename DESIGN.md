@@ -12,9 +12,9 @@ typography:
   display:
     fontFamily: "Bodoni Moda, serif"
     fontWeight: 400
-    fontSize: "clamp(54px, 5.4vw, 78px)"
-    lineHeight: 1.04
-    letterSpacing: "-.055em"
+    fontSize: "34px"
+    lineHeight: 1.2
+    letterSpacing: "-.04em"
   body:
     fontFamily: "Work Sans, sans-serif"
     fontSize: "14px"
@@ -36,11 +36,11 @@ Warm near-black forms the default canvas. Ivory carries headings and active text
 
 ## Typography
 
-Bodoni Moda 400 provides delicate display lettering. The main introduction scales from 54 to 78px on desktop. The selected specimen uses 38–55px. Work Sans carries controls and explanations. Primary search is 16px on desktop and 14px on phones. Most supporting UI is 12–14px; the small anatomy number is 11px. Code uses the system monospace stack.
+Bodoni Moda 400 provides delicate display lettering. The desktop introduction is a single-line 34px heading. The selected specimen uses 38–55px. Work Sans carries controls and explanations. Primary search is 16px on desktop and 14px on phones. Most supporting UI is 12–14px; the small anatomy number is 11px. Code uses the system monospace stack.
 
 ## Layout
 
-A 96px desktop masthead leads into a two-column introduction. Search spans the available width above the specimen desk. The desk has a 206px index, flexible example, and 280px inspector separated by 30px gaps. Its maximum outer width is 1520px with 42px side padding. At 980px the inspector moves below the specimen. At 700px all panels stack, side padding becomes 22px, and the index scrolls horizontally. The phone introduction drops the duplicate Codex link and keeps search examples in one scrolling row.
+On specimen-desk pages, a 72px desktop masthead leads into a compact two-column introduction. Search spans the available width above the specimen desk. At desktop widths above 980px, the live canvas scales with viewport height between 240 and 380px so search, the example, and anatomy can be used together on laptop screens. The desk has a 206px index, flexible example, and 280px inspector separated by 30px gaps. Its maximum outer width is 1520px with 42px side padding. At 980px the inspector moves below the specimen. At 700px all panels stack, side padding becomes 22px, and the index scrolls horizontally. The phone introduction drops the duplicate Codex link and keeps search examples in one scrolling row.
 
 ## Elevation & Depth
 

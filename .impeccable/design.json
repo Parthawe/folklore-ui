@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-11-26T19:00:00Z",
+  "generatedAt": "2026-11-27T02:42:46.488285+00:00",
   "title": "Design System: Folklore",
   "extensions": {
     "breakpoints": [
@@ -27,7 +27,7 @@
     "overview": "A warm dark canvas and delicate display type frame the working specimen, its searchable vocabulary, and its named parts.",
     "keyCharacteristics": [
       "Warm near-black canvas",
-      "Bodoni Moda 400 display",
+      "Compact serif desktop title",
       "Full-width descriptive search",
       "Live specimen beside anatomy"
     ],

@@ -61,3 +61,23 @@ test('desktop/mobile fit, accessibility, downloads, and screenshots',async({page
  expect(findings).toEqual([]);
  for(const path of ['/downloads/folklore-plugin-1.1.0.zip','/downloads/folklore-skill-1.1.0.zip','/privacy/','/license/','/entries/dialog.md'])expect((await request.get(withBase(path))).ok()).toBeTruthy();
 });
+
+test('desktop search, complete specimen, and anatomy fit in one viewport',async({page})=>{
+ for(const size of [{width:1280,height:720},{width:1440,height:900}]){
+  await page.setViewportSize(size);
+  for(const path of ['/','/styles/']){
+   await page.goto(withBase(path));await page.evaluate(()=>document.fonts.ready);
+   await expect(page.locator('.desk-frame-loading')).toBeHidden();
+   for(const selector of ['.desk-search','.desk-canvas','[data-desk-part]']){
+    for(const box of await page.locator(selector).evaluateAll(els=>els.map(el=>{const r=el.getBoundingClientRect();return {top:r.top,bottom:r.bottom,left:r.left,right:r.right};}))){
+     expect(box.top,`${size.width} ${path} ${selector}: top`).toBeGreaterThanOrEqual(0);
+     expect(box.bottom,`${size.width} ${path} ${selector}: bottom`).toBeLessThanOrEqual(size.height);
+    }
+   }
+   expect(await page.evaluate(()=>scrollY)).toBe(0);
+   await page.locator('[data-desk-part="1"]').click();
+   await expect(page.frameLocator('#desk-frame').locator('.specimen')).toHaveAttribute('data-inspect','1');
+   if(path==='/')await page.screenshot({path:`artifacts/${size.width}-compact-desktop.png`});
+  }
+ }
+});
