@@ -34,4 +34,4 @@ The approved plan and live reference workflow. API claims require primary docume
 
 ## Latest visual reference
 
-The user supplied a Glassly website screenshot and requested that direction for Folklore: light surfaces, blue emphasis, sans-serif type, fine grid lines, and aligned product panels. This supersedes the dark designwhich.works direction. Keep the later compact-desktop requirement: search, complete specimen, and clickable anatomy together at laptop sizes.
+The current reference is paper.design, superseding the earlier Glassly screenshot. Use a black canvas, warm ivory lightweight typography, neutral graphite editor chrome, and original warm paper specimen artboards. Preserve search, complete specimen, and clickable anatomy together at laptop sizes.

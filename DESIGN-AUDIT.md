@@ -21,3 +21,7 @@ Verification uses desktop and phone renders, interaction tests, and automated WC
 The user requested closer fidelity in grid, typography, and specimen visuals. The follow-up uses one framed 1400px drawing surface with an 88px construction grid, centered navigation, refined DM Sans type, square specimen frames, and original annotated specimen scenes. The scrim example now contains a reference-library page, geometric cover studies, a shallow perspective, and a native dialog with a real destination row. The existing dim, blur, and dismissal interactions remain wired to anatomy. Sample counts are explicitly contained in the example workspace.
 
 Eight browser tests passed locally, including all 40 entries, mobile and desktop accessibility checks, and one-viewport geometry at 1280×720 and 1440×900.
+
+## Paper reference update
+
+The latest request replaces the blue construction-grid direction with Paper’s black canvas, ivory text, graphite editor panels and quieter navigation. Search and all three product panels now share one rounded editor window with a compact title bar. The live scrim scene uses warm paper artboards and olive geometric studies. The native dialog, search, anatomy, saved entries, briefs, themes and policy links remain functional. All eight browser tests pass, including automated contrast checks and no-scroll anatomy geometry at 1280×720 and 1440×900. DM Sans Variable supplies the typography; the reference’s commercial Matter font is not redistributed.

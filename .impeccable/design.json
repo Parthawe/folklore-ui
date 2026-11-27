@@ -23,12 +23,13 @@
   },
   "components": [],
   "narrative": {
-    "northStar": "Interface drawing desk",
-    "overview": "A continuous construction grid, DM Sans typography, and code-native specimen scenes connect pattern names to live anatomy.",
+    "northStar": "Interface specimen editor",
+    "overview": "Paper-inspired black canvas, warm ivory typography and graphite editor panels connect searchable UI vocabulary to live anatomy.",
     "keyCharacteristics": [
-      "Continuous 88px structural grid",
-      "DM Sans Variable hierarchy",
-      "Detailed native-dialog specimen",
+      "Black canvas and warm ivory type",
+      "Light variable sans-serif hierarchy",
+      "Graphite editor chrome",
+      "Warm paper specimen artwork",
       "Compact laptop workflow"
     ],
     "rules": [],

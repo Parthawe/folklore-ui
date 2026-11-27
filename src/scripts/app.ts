@@ -12,7 +12,7 @@ function updateSaved(){const ids=bookmarks();$$('.saved-count').forEach(el=>el.t
 updateSaved();
 document.addEventListener('folklore:saved',updateSaved);
 window.addEventListener('storage',event=>{if(event.key==='folklore-saved'){updateSaved();document.dispatchEvent(new Event('folklore:saved'));}});
-$<HTMLButtonElement>('.theme-toggle')?.addEventListener('click',()=>{const next=document.documentElement.dataset.theme==='dark'?'light':'dark';document.documentElement.dataset.theme=next;try{localStorage.setItem('folklore-theme-v4',next);}catch{}announce(`${next} theme selected`);});
+$<HTMLButtonElement>('.theme-toggle')?.addEventListener('click',()=>{const next=document.documentElement.dataset.theme==='dark'?'light':'dark';document.documentElement.dataset.theme=next;try{localStorage.setItem('folklore-theme-v5',next);}catch{}announce(`${next} theme selected`);});
 let catalogPromise:Promise<Entry[]>|undefined;
 function getCatalog(){return catalogPromise??=fetch(withBase('/data/catalog.json')).then(r=>{if(!r.ok)throw new Error('Catalog unavailable');return r.json() as Promise<Entry[]>;}).catch(e=>{catalogPromise=undefined;throw e;});}
 async function copy(text:string,button:HTMLButtonElement){const before=button.textContent||'Copy';try{await navigator.clipboard.writeText(text);button.textContent='Copied';announce('Copied to clipboard');setTimeout(()=>button.textContent=before,1800);}catch{button.textContent='Copy unavailable';announce('Clipboard access failed. Use the downloadable Markdown or select the text manually.');setTimeout(()=>button.textContent=before,2500);}}

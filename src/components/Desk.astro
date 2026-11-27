@@ -8,6 +8,7 @@ const initial=entries.find(e=>e.id===(kind==='style'?'glassmorphism':'scrim'))!;
 ---
 <div class="specimen-desk" data-desk data-kind={kind} data-initial={initial.id}>
   <div class="desk-intro"><h1>{kind==='style'?<>Find the words<br/> for the <em>look.</em></>:<>A name for<br/> what’s in <em>mind.</em></>}</h1><div class="desk-intro-note"><p>{kind==='style'?'Explore 10 visual styles through working examples, defining signals, and implementation notes.':'Describe an interface. Find its name, explore its parts, and take a working brief into your code.'}</p><a href={withBase('/install/')}>Use Folklore in Codex <span aria-hidden="true">↗</span></a></div></div>
+  <div class="desk-editor"><div class="editor-chrome"><span class="editor-window-dots" aria-hidden="true"><i></i><i></i><i></i></span><span>Folklore / {kind==='style'?'Visual styles':'Interface library'}</span><span class="editor-chrome-note">Explore & inspect</span></div>
   <div class="desk-query-row"><div class="desk-search"><label class="sr-only" for="desk-query">Describe the {kind==='style'?'visual style':'UI element'}</label><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="8.5" cy="8.5" r="5.5"/><path d="m13 13 5 5"/></svg><input id="desk-query" type="search" placeholder={kind==='style'?'Describe a visual style…':'Describe an interface detail…'} autocomplete="off"/><kbd>⌘ K</kbd></div><div class="desk-query-examples"><span>Try</span>{(kind==='style'?['frosted cards','soft embossed buttons']:['dark layer behind popup','gray shapes before content loads']).map(q=><button data-desk-example={q}>{q}</button>)}</div><p class="desk-search-status" role="status"></p></div>
   <div class="desk-workspace">
     <aside class="desk-index" aria-label="Pattern index"><h2 class="desk-index-title">{kind==='style'?'Visual styles':'UI elements'}</h2>
@@ -28,6 +29,7 @@ const initial=entries.find(e=>e.id===(kind==='style'?'glassmorphism':'scrim'))!;
       <div data-inspector-panel="brief" hidden><div class="inspector-section-head"><h3>Take the idea into code.</h3><p>Adapt this brief to your project’s components and framework.</p></div><p class="desk-prompt" data-desk-prompt>{initial.prompt}</p><button class="desk-copy-brief" data-desk-copy="brief">Copy build brief</button><h3 class="desk-debug-title">Something not working?</h3><p class="desk-debug" data-desk-debug>{initial.debug}</p><button data-desk-copy="debug">Copy debug prompt</button></div>
       <div class="desk-source"><span>Source documentation</span><a data-desk-source href={initial.sources[0].url} target="_blank" rel="noreferrer">{initial.sources[0].title}</a></div>
     </aside>
+  </div>
   </div>
   <div class="desk-bottom-line"><span>30 UI elements · 10 visual styles</span><a href="https://github.com/Parthawe/folklore-ui">View source on GitHub</a><a href={withBase('/install/')}>Install Folklore</a></div>
 </div>
