@@ -1,5 +1,7 @@
 # Third-party notices
 
+The interface uses DM Sans, distributed through Fontsource under the SIL Open Font License 1.1. Its license is included at public/fonts/DM-Sans-LICENSE.txt. Source: https://github.com/googlefonts/dm-fonts.
+
 Folklore uses Work Sans and Bodoni Moda, distributed through Fontsource under SIL Open Font License 1.1. Their licenses are distributed at public/fonts/Work-Sans-LICENSE.txt and public/fonts/Bodoni-Moda-LICENSE.txt. Font sources: https://github.com/weiweihuanghuang/Work-Sans and https://github.com/indestructible-type/Bodoni.
 
 Folklore also includes Source Sans 3 by Adobe, licensed under SIL Open Font License 1.1. A copy of the font license is distributed at public/fonts/LICENSE.txt and in built output. Font source: https://github.com/adobe-fonts/source-sans.

@@ -15,3 +15,9 @@ Reviewed with the bundled design-slop-audit skill on 26 November 2026. The user 
 Preserved the working specimens, local search, anatomy inspection, platform filtering, source links, Codex installation, copyable briefs, bookmarks, comparisons, copyright notice, and MIT license. No portfolio metrics, logos, photographs, commercial claims, or proprietary font files were copied.
 
 Verification uses desktop and phone renders, interaction tests, and automated WCAG checks. Automated checks do not replace user research. Tests cover all 40 entry routes, keyboard behavior, search focus, empty/error states, storage and clipboard behavior, downloads, and theme persistence.
+
+## Reference-fidelity follow-up
+
+The user requested closer fidelity in grid, typography, and specimen visuals. The follow-up uses one framed 1400px drawing surface with an 88px construction grid, centered navigation, refined DM Sans type, square specimen frames, and original annotated specimen scenes. The scrim example now contains a reference-library page, geometric cover studies, a shallow perspective, and a native dialog with a real destination row. The existing dim, blur, and dismissal interactions remain wired to anatomy. Sample counts are explicitly contained in the example workspace.
+
+Eight browser tests passed locally, including all 40 entries, mobile and desktop accessibility checks, and one-viewport geometry at 1280×720 and 1440×900.

@@ -10,13 +10,13 @@ colors:
   line: "#e0e6f0"
 typography:
   display:
-    fontFamily: "Work Sans, sans-serif"
+    fontFamily: "DM Sans Variable, sans-serif"
     fontWeight: 400
-    fontSize: "30px"
+    fontSize: "32px"
     lineHeight: 1.2
     letterSpacing: "-.055em"
   body:
-    fontFamily: "Work Sans, sans-serif"
+    fontFamily: "DM Sans Variable, sans-serif"
     fontSize: "14px"
     lineHeight: 1.7
 rounded:
@@ -38,21 +38,21 @@ The default canvas is very pale blue-white with white input and panel surfaces. 
 
 ## Typography
 
-Work Sans is used throughout the shell. The compact desktop heading is 30px, regular weight, with a blue emphasized phrase. Selected specimen names are 34px. Search uses 14px on desktop, descriptions use 13px, and supporting actions use 12px or larger. Phone display headings are 42px. Code and keyboard shortcuts retain the system monospace stack.
+DM Sans Variable is used throughout the shell. The compact desktop heading is 32px, regular weight, with a blue emphasized phrase. Selected specimen names are 38px. Search uses 14px on desktop, descriptions use 13px, and supporting actions use 12px or larger. Phone display headings are 42px. Code and keyboard shortcuts retain the system monospace stack.
 
 ## Layout
 
-A 72px desktop masthead leads into a compact title and description row. Search spans the width above a connected three-panel desk. At desktop widths above 980px, the index is 205px, the inspector is 280px, and the specimen takes the remaining space. Thin rules mark their boundaries. The outer frame has a 1440px maximum width and 42px side padding.
+A 64px desktop masthead leads into a compact title and description row. Search spans the width above a connected three-panel desk. At desktop widths above 980px, the index is 190px, the inspector is 270px, and the specimen takes the remaining space. Thin rules mark their boundaries. The outer drawing frame has a 1400px maximum width and 40px exterior gutters. Its 88px construction grid continues across the surrounding canvas and connects the masthead, title, search, and product panels.
 
-The example height follows the viewport between 240 and 360px. Desktop inspector helper copy and repeated style “Visual signal” labels are hidden to preserve laptop fit; all controls and descriptions remain. At 980px the inspector moves below the specimen. At 700px all panels stack, side padding becomes 22px, and the index scrolls horizontally. Search, the complete specimen, and each anatomy control are tested at 1280×720 and 1440×900.
+The example height follows the viewport between 245 and 390px. Desktop inspector helper copy and repeated style “Visual signal” labels are hidden to preserve laptop fit; all controls and descriptions remain. At 980px the inspector moves below the specimen. At 700px all panels stack, side padding becomes 22px, and the index scrolls horizontally. Search, the complete specimen, and each anatomy control are tested at 1280×720 and 1440×900.
 
 ## Elevation & Depth
 
-The shell relies on alignment, fine borders, and subtle surface contrast. Modal shadows and blur remain inside the example, where they explain layering. Avoid adding shadows to every panel.
+The shell relies on alignment, fine borders, and subtle surface contrast. The default scrim specimen is a detailed reference-library workspace, presented in shallow perspective on a 44px drawing grid. Its browser chrome, navigation, original geometric reference covers, destination row, and numbered dialog annotation are code-native assets. The foreground is a working native dialog. Dim, blur, and dismiss inspection alter the corresponding real layer. All sample counts and labels belong to this explicitly marked demonstration. Shadows and blur explain layering inside the example; avoid adding them to every shell panel.
 
 ## Shapes
 
-Search and primary controls use 7px corners; specimens use 8px corners. The surrounding desk panels are joined by straight structural borders. Selected index rows use 5px corners. The blue open-book mark is Folklore’s own existing icon.
+Search uses 6px corners and primary controls use 7px corners; specimen frames use square corners. The surrounding desk panels are joined by straight structural borders. Selected index rows use 5px corners. The blue open-book mark is Folklore’s own existing icon.
 
 ## Components
 

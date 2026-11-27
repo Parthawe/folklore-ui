@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-11-27T03:06:30.513149+00:00",
+  "generatedAt": "2026-11-27T05:27:16.666122+00:00",
   "title": "Design System: Folklore",
   "extensions": {
     "breakpoints": [
@@ -23,13 +23,13 @@
   },
   "components": [],
   "narrative": {
-    "northStar": "Light structural specimen desk",
-    "overview": "Blue actions, clean sans-serif hierarchy, and fine panel boundaries organize the index, live example, and anatomy in one compact workspace.",
+    "northStar": "Interface drawing desk",
+    "overview": "A continuous construction grid, DM Sans typography, and code-native specimen scenes connect pattern names to live anatomy.",
     "keyCharacteristics": [
-      "Blue-white canvas",
-      "Work Sans hierarchy",
-      "Compact laptop workflow",
-      "Connected product panels"
+      "Continuous 88px structural grid",
+      "DM Sans Variable hierarchy",
+      "Detailed native-dialog specimen",
+      "Compact laptop workflow"
     ],
     "rules": [],
     "dos": [
