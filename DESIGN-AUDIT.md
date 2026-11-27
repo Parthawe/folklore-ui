@@ -25,3 +25,7 @@ Eight browser tests passed locally, including all 40 entries, mobile and desktop
 ## Paper reference update
 
 The latest request replaces the blue construction-grid direction with Paper’s black canvas, ivory text, graphite editor panels and quieter navigation. Search and all three product panels now share one rounded editor window with a compact title bar. The live scrim scene uses warm paper artboards and olive geometric studies. The native dialog, search, anatomy, saved entries, briefs, themes and policy links remain functional. All eight browser tests pass, including automated contrast checks and no-scroll anatomy geometry at 1280×720 and 1440×900. DM Sans Variable supplies the typography; the reference’s commercial Matter font is not redistributed.
+
+## Refinement verification
+
+Fixed legacy important color rules that overrode neutral specimen buttons. Removed the decorative dot grid and permanent dialog annotation. Increased anatomy readability, moved alternate query phrases into a disclosure, and refined download spacing on phones. Search has a separate Clear control, preserves the current entry when cleared, and keeps an existing specimen mounted as matching text changes. Automated checks cover search recovery and the native dialog’s complete visible bounds in addition to the canvas and anatomy bounds. All eight browser tests and Astro checks pass.

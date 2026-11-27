@@ -8,8 +8,9 @@ test('desk search, platform filter, anatomy, and no-match recovery',async({page}
  await page.getByLabel('Platform',{exact:true}).selectOption('macos');await expect(page.locator('[data-desk-entry]:visible')).toHaveCount(10);
  await page.getByLabel('Platform',{exact:true}).selectOption('all');await page.getByRole('searchbox').fill('dark layer behind popup');await expect(page.locator('[data-desk-name]')).toHaveText('Scrim');await expect(page).toHaveURL(/entry=scrim/);await expect(page.frameLocator('#desk-frame').locator('.overlay-card')).toBeVisible();await expect(page.getByRole('searchbox')).toBeFocused();
  await page.locator('[data-desk-part="1"]').click();await expect(page.locator('[data-desk-readout]')).toContainText('Blur');await expect(page.frameLocator('#desk-frame').locator('.specimen')).toHaveAttribute('data-inspect','1');
+ await page.getByRole('button',{name:'Clear search',exact:true}).click();await expect(page.getByRole('searchbox')).toHaveValue('');await expect(page.locator('[data-desk-name]')).toHaveText('Scrim');await expect(page.frameLocator('#desk-frame').locator('.specimen')).toHaveAttribute('data-inspect','1');
  await page.getByRole('button',{name:'Agent brief',exact:true}).click();await expect(page.locator('[data-desk-prompt]')).toContainText('Implement a scrim');
- await page.getByRole('searchbox').fill('unrecognizablequuxxyz');await expect(page.getByText('No close match.',{exact:true})).toBeVisible();await page.getByRole('button',{name:'Clear search',exact:true}).click();await expect(page.locator('[data-desk-entry]:visible')).toHaveCount(30);
+ await page.getByRole('searchbox').fill('unrecognizablequuxxyz');await expect(page.getByText('No close match.',{exact:true})).toBeVisible();await page.getByRole('button',{name:'Reset search and filters',exact:true}).click();await expect(page.locator('[data-desk-entry]:visible')).toHaveCount(30);
  await page.goto('/folklore-ui/styles/');await page.getByRole('searchbox').fill('soft embossed buttons');await expect(page.locator('[data-desk-name]')).toHaveText('Neumorphism');
  await page.goto('/folklore-ui/?q=placeholder');await expect(page.locator('[data-desk-name]')).toHaveText('Form field');
 });
@@ -74,6 +75,7 @@ test('desktop search, complete specimen, and anatomy fit in one viewport',async(
      expect(box.bottom,`${size.width} ${path} ${selector}: bottom`).toBeLessThanOrEqual(size.height);
     }
    }
+   if(path==='/'){const dialog=await page.frameLocator('#desk-frame').locator('.overlay-card').evaluate(el=>{const r=el.getBoundingClientRect();return {top:r.top,bottom:r.bottom,height:innerHeight};});expect(dialog.top).toBeGreaterThanOrEqual(0);expect(dialog.bottom).toBeLessThanOrEqual(dialog.height);}
    expect(await page.evaluate(()=>scrollY)).toBe(0);
    await page.locator('[data-desk-part="1"]').click();
    await expect(page.frameLocator('#desk-frame').locator('.specimen')).toHaveAttribute('data-inspect','1');

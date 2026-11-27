@@ -15,10 +15,11 @@ if(foundRoot){
  function updateSave(){const yes=saved().includes(selectedId);get('[data-desk-save]').setAttribute('aria-pressed',String(yes));get('[data-desk-save] span').textContent=yes?'Saved':'Save';}
  function url(){const u=new URL(location.href);u.searchParams.set('entry',selectedId);input.value?u.searchParams.set('q',input.value):u.searchParams.delete('q');platform?.value&&platform.value!=='all'?u.searchParams.set('platform',platform.value):u.searchParams.delete('platform');history.replaceState(null,'',u);}
  function inspect(n:number){if(!selected)return;pendingPart=n;root.querySelectorAll('[data-desk-part]').forEach(b=>b.setAttribute('aria-pressed',String((b as HTMLElement).dataset.deskPart===String(n))));const p=selected.anatomy[n];get('[data-desk-readout]').textContent=`${p.name}. ${p.description}`;frame.contentWindow?.postMessage({type:'folklore:inspect',part:n},location.origin);}
+ function revealSelected(){const id=selectedId;const rail=get('.desk-entry-list'),active=buttons.find(b=>b.dataset.deskEntry===id);if(active){const item=active.getBoundingClientRect(),bounds=rail.getBoundingClientRect();if(getComputedStyle(rail).flexDirection==='row'){rail.scrollLeft+=item.left-bounds.left-12;}else if(item.bottom>bounds.bottom||item.top<bounds.top){rail.scrollTop+=item.top-bounds.top-8;}}}
  function select(id:string,part:number|null=null){
   const e=entries.find(e=>e.id===id);if(!e)return;selected=e;selectedId=e.id;pendingPart=part;
   buttons.forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.deskEntry===id)));
-  const rail=get('.desk-entry-list'),active=buttons.find(b=>b.dataset.deskEntry===id);if(active){const item=active.getBoundingClientRect(),bounds=rail.getBoundingClientRect();if(getComputedStyle(rail).flexDirection==='row'){rail.scrollLeft+=item.left-bounds.left-12;}else if(item.bottom>bounds.bottom||item.top<bounds.top){rail.scrollTop+=item.top-bounds.top-8;}}
+  revealSelected();
   get('[data-desk-name]').textContent=e.name;get('[data-desk-description]').textContent=e.description;get('[data-desk-platform]').textContent=e.kind==='style'?e.status:e.platform==='macos'?'macOS':'Web';get('[data-desk-demo-label]').textContent=e.platform==='macos'?'Browser simulation. Native behavior differs.':e.kind==='style'?'Original style specimen. Try the controls.':'Interactive example';
   restoreSearchFocus=document.activeElement===input;frame.title=`${e.name} working specimen`;frame.src=withBase(`/specimens/${e.id}/?open=1`);get('.desk-frame-loading').hidden=false;
   get<HTMLAnchorElement>('[data-desk-full]').href=withBase(`/${e.kind==='style'?'styles':e.platform}/${e.id}/`);
@@ -29,13 +30,16 @@ if(foundRoot){
   get('[data-desk-readout]').textContent='Select an anatomy part to highlight it in the example.';updateSave();url();
  }
  function render(autoSelect=false){
+  get('[data-desk-clear-query]').hidden=!input.value;
   const results=search(entries,input.value,{kind:root.dataset.kind,platform:platform?.value||'all',limit:40});
   const found=new Map<string,{index:number}>(results.map((r:{entry:Entry},i:number)=>[r.entry.id,{index:i}]));
   buttons.forEach(b=>{const result=found.get(b.dataset.deskEntry!);b.hidden=!result;b.style.order=String(result?.index||0);});get('[data-desk-count]').textContent=`${results.length} ${root.dataset.kind==='style'?'styles':'elements'}`;get('.desk-no-match').hidden=results.length!==0;status.textContent=input.value?`${results.length} matching ${results.length===1?'entry':'entries'}`:'';
-  if(autoSelect&&results.length){const first=results[0];const p=first.part?first.entry.anatomy.findIndex((p:{name:string})=>p.name===first.part.name):-1;select(first.entry.id,p>=0?p:null);}else url();
+  if(autoSelect&&results.length&&(input.value||!found.has(selectedId))){const first=results[0];const p=first.part?first.entry.anatomy.findIndex((p:{name:string})=>p.name===first.part.name):-1;if(first.entry.id===selectedId){if(p>=0)inspect(p);url();}else select(first.entry.id,p>=0?p:null);}else{url();revealSelected();}
  }
  buttons.forEach(b=>b.addEventListener('click',()=>select(b.dataset.deskEntry!)));
  root.querySelectorAll<HTMLButtonElement>('[data-desk-example]').forEach(b=>b.addEventListener('click',()=>{input.value=b.dataset.deskExample!;input.focus();render(true);}));
+ get('[data-desk-clear-query]').addEventListener('click',()=>{input.value='';render();input.focus({preventScroll:true});});
+ input.addEventListener('keydown',e=>{if(e.key==='Escape'&&input.value){input.value='';render();}});
  input.addEventListener('input',()=>render(true));platform?.addEventListener('change',()=>render(true));
  get('[data-desk-clear]').addEventListener('click',()=>{input.value='';if(platform)platform.value='all';render();input.focus();});
  get('[data-desk-reset]').addEventListener('click',()=>{pendingPart=null;frame.src=frame.src;get('[data-desk-readout]').textContent='Example reset. Try the controls or inspect a part.';root.querySelectorAll('[data-desk-part]').forEach(b=>b.setAttribute('aria-pressed','false'));});
