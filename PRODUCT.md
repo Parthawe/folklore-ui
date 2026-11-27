@@ -31,3 +31,7 @@ The approved plan and live reference workflow. API claims require primary docume
 - Preserve platform and framework distinctions.
 - Share content between browser and agent outputs.
 - Keep installation usable without a service or API key.
+
+## Latest visual reference
+
+The user supplied a Glassly website screenshot and requested that direction for Folklore: light surfaces, blue emphasis, sans-serif type, fine grid lines, and aligned product panels. This supersedes the dark designwhich.works direction. Keep the later compact-desktop requirement: search, complete specimen, and clickable anatomy together at laptop sizes.

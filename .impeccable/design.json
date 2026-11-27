@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-11-27T02:42:46.488285+00:00",
+  "generatedAt": "2026-11-27T03:06:30.513149+00:00",
   "title": "Design System: Folklore",
   "extensions": {
     "breakpoints": [
@@ -23,21 +23,21 @@
   },
   "components": [],
   "narrative": {
-    "northStar": "Dark editorial specimen desk",
-    "overview": "A warm dark canvas and delicate display type frame the working specimen, its searchable vocabulary, and its named parts.",
+    "northStar": "Light structural specimen desk",
+    "overview": "Blue actions, clean sans-serif hierarchy, and fine panel boundaries organize the index, live example, and anatomy in one compact workspace.",
     "keyCharacteristics": [
-      "Warm near-black canvas",
-      "Compact serif desktop title",
-      "Full-width descriptive search",
-      "Live specimen beside anatomy"
+      "Blue-white canvas",
+      "Work Sans hierarchy",
+      "Compact laptop workflow",
+      "Connected product panels"
     ],
     "rules": [],
     "dos": [
       "Keep specimens interactive."
     ],
     "donts": [
-      "Do not constrain search to the index rail.",
-      "Do not restore repeated slogans or tiny action labels."
+      "Do not restore the oversized desktop hero.",
+      "Do not copy unrelated imagery or commercial claims from the supplied reference."
     ]
   }
 }

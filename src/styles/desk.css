@@ -1,26 +1,26 @@
 @layer reset,base,layout,specimens,redesign;
 @layer redesign {
- :root,:root[data-theme=dark]{--bg:#111110;--surface:#191918;--surface-2:#262625;--ink:#eeece6;--muted:#aaa9a3;--line:#353532;--accent:#b7c5ff;--blue:#4d66ce;color-scheme:dark;font:400 16px/1.5 'Work Sans',sans-serif}
- :root[data-theme=light]{--bg:#f2f0e9;--surface:#faf9f5;--surface-2:#e6e3dc;--ink:#22221f;--muted:#62615b;--line:#c9c6bd;--accent:#344fc1;--blue:#344fc1;color-scheme:light}
+ :root[data-theme=dark]{--bg:#10141c;--surface:#171d28;--surface-2:#232e43;--ink:#edf2fc;--muted:#a9b7cd;--line:#334058;--accent:#9ab6ff;--blue:#315ff0;color-scheme:dark;font:400 16px/1.5 'Work Sans',sans-serif}
+ :root,:root[data-theme=light]{--bg:#fcfdff;--surface:#ffffff;--surface-2:#edf3ff;--ink:#1b2433;--muted:#59677c;--line:#e0e6f0;--accent:#064bff;--blue:#064bff;color-scheme:light;font:400 16px/1.5 'Work Sans',sans-serif}
  ::selection{background:#637bd1;color:#fff}
  h1,h2,h3{font-weight:500;letter-spacing:-.025em}
  button,input,select,textarea{border-radius:8px}
  button,a{transition:color .16s,background-color .16s,border-color .16s}
  .site-header{max-width:1520px;height:96px;padding:0 42px;gap:36px;border:0}
- .brand{font:400 35px/1 'Bodoni Moda',Georgia,serif;letter-spacing:-.045em;gap:0}
- .brand svg,.brand-period{display:none}
- .site-header nav{height:46px;align-self:center;gap:0;border:1px solid var(--line);border-radius:11px;padding:4px}
+ .brand{font:500 24px/1 'Work Sans',sans-serif;letter-spacing:-.06em;gap:9px}
+ .brand-period{display:none}.brand svg{display:block;width:22px;height:24px;color:var(--accent)}
+ .site-header nav{height:46px;align-self:center;gap:0;border:0;border-radius:0;padding:0}
  .site-header nav a{padding:0 15px;font-size:13px;font-weight:400;border-radius:7px}
- .site-header nav a[aria-current=page]{background:var(--surface-2)}
+ .site-header nav a[aria-current=page]{background:transparent;color:var(--accent)}
  .site-header nav a[aria-current=page]:after{display:none}
  .header-actions{gap:12px;font-size:13px}
- .theme-toggle{border:1px solid var(--line);border-radius:10px;padding:12px;background:transparent}
- .install-link{padding:11px 15px;border-radius:10px;background:var(--surface);gap:18px}
- .install-link:hover{background:var(--surface-2);color:var(--ink)}
+ .theme-toggle{border:1px solid var(--line);border-radius:7px;padding:12px;background:transparent}
+ .install-link{padding:10px 15px;border-radius:7px;background:var(--blue);border-color:var(--blue);color:#fff;gap:18px}
+ .install-link:hover{background:#0039d1;color:#fff}
  .specimen-desk{max-width:1520px;padding:0 42px;margin:auto}
  .desk-intro{display:grid;grid-template-columns:minmax(0,1fr) 340px;align-items:end;gap:70px;padding:30px 0 32px}
- .desk-intro h1{font:400 clamp(54px,5.4vw,78px)/1.04 'Bodoni Moda',Georgia,serif;letter-spacing:-.055em;max-width:13ch}
- .desk-intro h1 em{font-style:normal;color:var(--muted)}
+ .desk-intro h1{font:400 clamp(42px,5.4vw,64px)/1.08 'Work Sans',sans-serif;letter-spacing:-.055em;max-width:13ch}
+ .desk-intro h1 em{font-style:normal;color:var(--accent)}
  .desk-intro-note{padding-bottom:8px}
  .desk-intro-note p{font-size:15px;line-height:1.8;color:var(--muted);max-width:35ch}
  .desk-intro-note a{display:inline-flex;align-items:center;gap:25px;font-size:14px;text-decoration:none;margin-top:20px;color:var(--ink)}
@@ -44,7 +44,7 @@
  .desk-entry-list{display:flex;flex-direction:column;gap:4px;overflow-y:auto;min-height:0;max-height:595px;padding:2px 5px 6px 0;scrollbar-width:thin}
  .desk-entry{display:flex;align-items:center;gap:10px;width:100%;min-height:44px;padding:11px 12px;border:1px solid transparent;background:none;border-radius:7px;text-align:left;color:var(--muted)}
  .desk-entry:hover:not(:disabled){background:var(--surface);color:var(--ink)}
- .desk-entry[aria-pressed=true]{background:var(--surface-2);border-color:var(--line);color:var(--ink)}
+ .desk-entry[aria-pressed=true]{background:var(--surface-2);border-color:#b8ccff;color:var(--accent)}
  .desk-entry>span:nth-child(2){flex:1;min-width:0}
  .desk-entry strong{display:block;font-size:13px;font-weight:400;line-height:1.5}
  .desk-entry small,.entry-symbol{display:none}
@@ -56,7 +56,7 @@
  .desk-stage{min-width:0;display:flex;flex-direction:column;padding:0}
  .desk-stage-heading{display:flex;align-items:center;justify-content:space-between;gap:15px;min-height:57px}
  .desk-stage-heading>div{display:flex;align-items:center;gap:17px;flex-wrap:wrap;min-width:0}
- .desk-stage h2{font:400 clamp(38px,3.8vw,55px)/1.1 'Bodoni Moda',Georgia,serif;letter-spacing:-.045em;overflow-wrap:anywhere}
+ .desk-stage h2{font:400 clamp(34px,3.8vw,48px)/1.1 'Work Sans',sans-serif;letter-spacing:-.045em;overflow-wrap:anywhere}
  .desk-stage-heading [data-desk-platform]{font-size:12px;color:var(--muted);white-space:normal;max-width:22ch}
  .desk-save{display:flex;align-items:center;gap:7px;background:none;border:0;padding:10px 0;font-size:12px;color:var(--muted);flex-shrink:0}
  .desk-save[aria-pressed=true]{color:var(--accent)}.desk-save[aria-pressed=true] svg{fill:var(--surface-2)}
@@ -80,15 +80,15 @@
  .desk-parts>button{display:flex;align-items:flex-start;gap:13px;padding:20px 0;width:100%;border:0;border-bottom:1px solid var(--line);border-radius:0;background:none;text-align:left}
  .desk-parts>button:hover:not(:disabled){background:none;color:var(--accent)}.desk-parts>button[aria-pressed=true]{color:var(--accent)}
  .desk-parts .part-number{width:23px;height:23px;font-size:11px;background:none;margin-top:2px}
- .desk-parts>button[aria-pressed=true] .part-number{background:var(--accent);color:var(--bg);border-color:var(--accent)}
+ .desk-parts>button[aria-pressed=true] .part-number{background:var(--blue);color:#fff;border-color:var(--accent)}
  .desk-parts>button>span:nth-child(2){flex:1;min-width:0}
  .desk-parts strong{display:block;font-size:14px;font-weight:500;line-height:1.6}.desk-parts code{display:block;font-size:12px;line-height:1.7;color:var(--accent);margin-top:3px}.desk-parts>button>span>span{display:block;font-size:13px;line-height:1.75;color:var(--muted);margin-top:8px}
  .desk-aliases{padding:26px 0}.desk-aliases h3{font-size:13px;font-weight:400;color:var(--muted)}.desk-aliases>div{display:flex;flex-direction:column;align-items:flex-start;gap:10px;margin-top:14px}.desk-aliases button{padding:0;border:0;background:none;border-radius:0;font-size:12px;line-height:1.8;text-align:left;color:var(--ink)}
  .desk-source{border-top:1px solid var(--line);padding:20px 0 0;display:flex;flex-direction:column;gap:8px;font-size:12px;line-height:1.7}.desk-source>span{color:var(--muted)}.desk-source>a{color:var(--accent);text-decoration:none}
- .desk-prompt,.desk-debug{font-size:14px;line-height:1.85;color:var(--muted);margin-top:16px}.desk-copy-brief{width:100%;font-size:13px;background:var(--ink);color:var(--bg);border-color:var(--ink);padding:13px;margin:25px 0}.desk-copy-brief:hover:not(:disabled){background:var(--accent);color:var(--bg)}.desk-debug-title{font-size:16px;margin-top:12px}.desk-debug+button{font-size:13px;margin:20px 0 25px}
+ .desk-prompt,.desk-debug{font-size:14px;line-height:1.85;color:var(--muted);margin-top:16px}.desk-copy-brief{width:100%;font-size:13px;background:var(--blue);color:#fff;border-color:var(--blue);padding:13px;margin:25px 0}.desk-copy-brief:hover:not(:disabled){background:#0039d1;color:#fff}.desk-debug-title{font-size:16px;margin-top:12px}.desk-debug+button{font-size:13px;margin:20px 0 25px}
  .desk-bottom-line{display:flex;align-items:center;gap:28px;color:var(--muted);font-size:12px;padding:35px 0 45px}.desk-bottom-line>span{margin-right:auto}.desk-bottom-line a{text-decoration:none}
- .site-footer{max-width:1436px;padding:30px 0 25px;margin:0 42px;gap:20px}.site-footer .footer-brand{font:400 30px/1 'Bodoni Moda',Georgia,serif;letter-spacing:-.04em}.site-footer p,.site-footer nav,.footer-version{font-size:12px;line-height:1.8}.site-footer nav{gap:22px}
- .entry-heading h1,.prose-page h1,.simple-intro h1,.compare-page h1{font-family:'Bodoni Moda',Georgia,serif;font-weight:400;letter-spacing:-.045em;line-height:1.1}
+ .site-footer{max-width:1436px;padding:30px 0 25px;margin:0 42px;gap:20px}.site-footer .footer-brand{font:500 23px/1 'Work Sans',sans-serif;letter-spacing:-.04em}.site-footer p,.site-footer nav,.footer-version{font-size:12px;line-height:1.8}.site-footer nav{gap:22px}
+ .entry-heading h1,.prose-page h1,.simple-intro h1,.compare-page h1{font-family:'Work Sans',sans-serif;font-weight:400;letter-spacing:-.045em;line-height:1.1}
  .entry-heading h1>span{display:none}.entry-page{max-width:1440px;padding:35px 42px 65px}.entry-definition{font-size:17px;line-height:1.8}.entry-text p{font-size:16px}.entry-text h2,.anatomy-list h2{font-size:20px}.anatomy-item strong{font-size:16px}.anatomy-item>span>span{font-size:14px}.detail-specimen{border-radius:16px}.detail-grid{gap:65px}.phrase-list span{font-size:14px}.related-list p{font-size:14px}
  .prose-page{padding-top:65px;padding-bottom:75px;max-width:820px}.prose-page h1{font-size:clamp(45px,5.5vw,76px)}.prose-page h2{font-size:23px;font-weight:400}.prose-page .lede{font-size:18px}.prose-page p,.prose-page li{font-size:16px;line-height:1.85}.prose-page pre{border-radius:10px;font-size:14px}
  @media(min-width:1520px){.site-footer{margin-left:auto;margin-right:auto}.desk-canvas{height:440px}}
@@ -111,7 +111,7 @@
   .desk-index{max-height:calc(100dvh - 260px)}
   .desk-entry-list{max-height:calc(100dvh - 415px)}
   .desk-stage-heading{min-height:44px}
-  .desk-stage h2{font-size:40px}
+  .desk-stage h2{font-size:34px}
   .desk-description{font-size:13px;line-height:1.7;margin-top:8px;min-height:0}
   .desk-canvas{height:clamp(240px,calc(100dvh - 430px),380px);margin-top:16px}
   .desk-canvas-controls{margin-top:5px}
@@ -125,6 +125,44 @@
   .desk-parts>button>span>span{margin-top:5px}
   [data-kind=style] .desk-parts code{display:none}
   .desk-aliases{padding:18px 0}
+ }
+ .desk-layout .site-header{border-bottom:1px solid var(--line)}
+ .desk-search{background:var(--surface);border-radius:7px}
+ .desk-canvas{background:#f2f6fd;border-color:#cad7ec;border-radius:8px}
+ .desk-canvas iframe{background:#f2f6fd}
+ .desk-frame-loading{background:var(--surface)}
+ .desk-frame-loading span{background:var(--accent)}
+ .desk-parts .part-number{border-color:var(--line);color:var(--muted)}
+ .desk-parts>button[aria-pressed=true]{color:var(--accent)}
+ .inspector-switch button[aria-pressed=true]{color:var(--accent);border-bottom-color:var(--accent)}
+ .desk-entry-links a{color:var(--accent)}
+ .desk-entry{border-radius:5px}
+ .desk-intro-note p{color:var(--muted)}
+ .specimen-desk{border-left:1px solid var(--line);border-right:1px solid var(--line)}
+ .desk-workspace{position:relative;border-bottom:1px solid var(--line)}
+ .desk-bottom-line{padding-left:0;padding-right:0}
+ @media(min-width:981px){
+  .desk-layout .site-header,.specimen-desk{max-width:1440px}
+  .desk-intro{background-image:linear-gradient(90deg,transparent calc(50% - .5px),var(--line) 50%,transparent calc(50% + .5px));padding-top:14px;padding-bottom:18px}
+  .desk-intro h1{font-size:30px;letter-spacing:-.055em}
+  .desk-workspace{gap:0;padding-top:0;grid-template-columns:205px minmax(0,1fr) 280px}
+  .desk-index{padding:15px 16px 10px 0}
+  .desk-stage{padding:12px 20px 14px;border-left:1px solid var(--line);border-right:1px solid var(--line)}
+  .desk-inspector{padding:12px 0 14px 18px}
+  .desk-canvas{height:clamp(240px,calc(100dvh - 450px),360px)}
+  .desk-parts>button{padding:8px 0}
+  .desk-parts>button>span>span{line-height:1.6}
+  .inspector-section-head{padding-top:12px}
+ }
+ @media(max-width:700px){
+  .brand{font-size:24px;gap:7px}.brand svg{width:18px;height:20px}
+  .site-header{gap:15px}.site-header nav{gap:12px}
+  .install-link{color:var(--ink)}.install-link:hover{background:none;color:var(--accent)}
+  .specimen-desk{border:0}
+  .desk-intro h1{font-size:42px;letter-spacing:-.055em;max-width:16ch}
+  .desk-entry[aria-pressed=true]{background:var(--blue);border-color:var(--blue);color:#fff}
+  .desk-stage h2{font-size:38px}.desk-canvas{border-radius:8px}
+  .desk-workspace{padding-bottom:25px}
  }
  @media(prefers-reduced-motion:reduce){.desk-frame-loading span{animation:none}button,a{transition:none}}
 }

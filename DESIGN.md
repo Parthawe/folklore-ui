@@ -1,59 +1,63 @@
 ---
 name: Folklore
-description: A dark specimen desk for naming and inspecting interface patterns.
+description: A light, blue-accented specimen desk for inspecting interface patterns.
 colors:
-  periwinkle: "#b7c5ff"
-  canvas: "#111110"
-  surface: "#191918"
-  ink: "#eeece6"
-  muted: "#aaa9a3"
-  line: "#353532"
+  blue: "#064bff"
+  canvas: "#fcfdff"
+  surface: "#ffffff"
+  ink: "#1b2433"
+  muted: "#59677c"
+  line: "#e0e6f0"
 typography:
   display:
-    fontFamily: "Bodoni Moda, serif"
+    fontFamily: "Work Sans, sans-serif"
     fontWeight: 400
-    fontSize: "34px"
+    fontSize: "30px"
     lineHeight: 1.2
-    letterSpacing: "-.04em"
+    letterSpacing: "-.055em"
   body:
     fontFamily: "Work Sans, sans-serif"
     fontSize: "14px"
     lineHeight: 1.7
 rounded:
-  control: "8px"
-  specimen: "16px"
+  control: "7px"
+  specimen: "8px"
 ---
 
 # Design System: Folklore
 
 ## Overview
 
-The user requested the visual language of designwhich.works on 26 November 2026. The implemented system pairs its dark, warm canvas and delicate display type with Folklore’s working specimen desk. The reference informs composition, spacing, contrast, and navigation; its portfolio content, commercial claims, proprietary fonts, and media are not included.
+The latest user-supplied Glassly screenshot supersedes the earlier dark portfolio reference. Folklore adapts the screenshot’s light surfaces, strong blue, clean sans-serif hierarchy, fine structural lines, and aligned product panels. Its own working UI examples supply the product detail. Glassly’s branding, photography, claims, and long marketing layout are not included.
+
+The desktop must keep search, a complete live example, and clickable anatomy together without page scrolling at the tested laptop sizes. Preserve this requirement when changing type, padding, or panel width.
 
 ## Colors
 
-Warm near-black forms the default canvas. Ivory carries headings and active text. Warm gray carries descriptions; pale periwinkle identifies API symbols and inspectable states. Thin neutral rules separate functional regions. Light mode uses a warm paper canvas, dark ink, and a deeper blue accent. Style specimens keep the palettes needed to demonstrate their subject.
+The default canvas is very pale blue-white with white input and panel surfaces. Dark navy carries text; blue identifies actions, selected patterns, API terms, and anatomy selection. Gray-blue rules organize the index, specimen, and inspector. Dark mode uses navy surfaces with a lighter blue accent. Style examples retain their own visual palettes.
 
 ## Typography
 
-Bodoni Moda 400 provides delicate display lettering. The desktop introduction is a single-line 34px heading. The selected specimen uses 38–55px. Work Sans carries controls and explanations. Primary search is 16px on desktop and 14px on phones. Most supporting UI is 12–14px; the small anatomy number is 11px. Code uses the system monospace stack.
+Work Sans is used throughout the shell. The compact desktop heading is 30px, regular weight, with a blue emphasized phrase. Selected specimen names are 34px. Search uses 14px on desktop, descriptions use 13px, and supporting actions use 12px or larger. Phone display headings are 42px. Code and keyboard shortcuts retain the system monospace stack.
 
 ## Layout
 
-On specimen-desk pages, a 72px desktop masthead leads into a compact two-column introduction. Search spans the available width above the specimen desk. At desktop widths above 980px, the live canvas scales with viewport height between 240 and 380px so search, the example, and anatomy can be used together on laptop screens. The desk has a 206px index, flexible example, and 280px inspector separated by 30px gaps. Its maximum outer width is 1520px with 42px side padding. At 980px the inspector moves below the specimen. At 700px all panels stack, side padding becomes 22px, and the index scrolls horizontally. The phone introduction drops the duplicate Codex link and keeps search examples in one scrolling row.
+A 72px desktop masthead leads into a compact title and description row. Search spans the width above a connected three-panel desk. At desktop widths above 980px, the index is 205px, the inspector is 280px, and the specimen takes the remaining space. Thin rules mark their boundaries. The outer frame has a 1440px maximum width and 42px side padding.
+
+The example height follows the viewport between 240 and 360px. Desktop inspector helper copy and repeated style “Visual signal” labels are hidden to preserve laptop fit; all controls and descriptions remain. At 980px the inspector moves below the specimen. At 700px all panels stack, side padding becomes 22px, and the index scrolls horizontally. Search, the complete specimen, and each anatomy control are tested at 1280×720 and 1440×900.
 
 ## Elevation & Depth
 
-The surrounding interface uses tonal surfaces and thin borders. Shadows and blur belong inside live demonstrations when they explain layering. The default modal is an ivory surface on a graphite demo workspace; its shadow and scrim show which surface is active.
+The shell relies on alignment, fine borders, and subtle surface contrast. Modal shadows and blur remain inside the example, where they explain layering. Avoid adding shadows to every panel.
 
 ## Shapes
 
-Navigation uses an 11px framed group with 7px selected items. Search uses 12px corners. The live canvas uses 16px corners, reduced to 14px on phones. These shapes separate navigation, input, and the interactive example.
+Search and primary controls use 7px corners; specimens use 8px corners. The surrounding desk panels are joined by straight structural borders. Selected index rows use 5px corners. The blue open-book mark is Folklore’s own existing icon.
 
 ## Components
 
-Search ranks the local catalog from everyday descriptions. Example queries are working buttons. Results retain input focus when an iframe opens a modal, and the selected entry remains visible within its own scroll rail. Anatomy selection updates the specimen and readout. The inspector switches between anatomy and copyable build/debug briefs. Saved entries and theme preference persist locally. Empty results, fetch failure, clipboard failure, and blocked storage have explicit feedback. Reduced-motion preferences disable loading animation and control transitions.
+Search ranks the offline catalog from everyday descriptions. Example queries are working buttons. Input focus is restored when a result opens an iframe modal. The active entry scrolls within its own rail. Anatomy selection updates the example and live readout. Build and debug briefs are copyable. Bookmarks and theme preference persist locally. Empty, fetch failure, clipboard failure, and storage failure states retain their feedback. Reduced-motion preferences disable animated feedback.
 
 ## Do's and Don'ts
 
-Do keep each pattern beside its anatomy and source. Do make sample interactions clearly identifiable as demonstrations. Do use the reference’s contrast and framing while preserving Folklore’s product task. Don't restore small 9–11px action labels, the sidebar-constrained search field, or repeated marketing slogans. Don't recolor style specimens into the shell palette.
+Do preserve the compact desktop workflow. Do use blue consistently for actions and selected state. Do make panel boundaries explain the relationship between index, live example, and anatomy. Don't restore the oversized introductory hero. Don't copy the reference’s unrelated claims, logos, phone mockups, or photography. Don't recolor visual-style specimens into the shell palette.
