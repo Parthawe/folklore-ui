@@ -69,11 +69,14 @@ test('desktop search, complete specimen, and anatomy fit in one viewport',async(
   for(const path of ['/','/styles/']){
    await page.goto(withBase(path));await page.evaluate(()=>document.fonts.ready);
    await expect(page.locator('.desk-frame-loading')).toBeHidden();
+   for(const query of ['',path==='/'?'dark layer behind popup':'frosted cards']){
+   await page.getByRole('searchbox').fill(query);await expect(page.locator('.desk-frame-loading')).toBeHidden();
    for(const selector of ['.desk-search','.desk-canvas','[data-desk-part]']){
     for(const box of await page.locator(selector).evaluateAll(els=>els.map(el=>{const r=el.getBoundingClientRect();return {top:r.top,bottom:r.bottom,left:r.left,right:r.right};}))){
      expect(box.top,`${size.width} ${path} ${selector}: top`).toBeGreaterThanOrEqual(0);
      expect(box.bottom,`${size.width} ${path} ${selector}: bottom`).toBeLessThanOrEqual(size.height);
     }
+   }
    }
    if(path==='/'){const dialog=await page.frameLocator('#desk-frame').locator('.overlay-card').evaluate(el=>{const r=el.getBoundingClientRect();return {top:r.top,bottom:r.bottom,height:innerHeight};});expect(dialog.top).toBeGreaterThanOrEqual(0);expect(dialog.bottom).toBeLessThanOrEqual(dialog.height);}
    expect(await page.evaluate(()=>scrollY)).toBe(0);

@@ -29,3 +29,7 @@ The latest request replaces the blue construction-grid direction with Paper’s 
 ## Refinement verification
 
 Fixed legacy important color rules that overrode neutral specimen buttons. Removed the decorative dot grid and permanent dialog annotation. Increased anatomy readability, moved alternate query phrases into a disclosure, and refined download spacing on phones. Search has a separate Clear control, preserves the current entry when cleared, and keeps an existing specimen mounted as matching text changes. Automated checks cover search recovery and the native dialog’s complete visible bounds in addition to the canvas and anatomy bounds. All eight browser tests and Astro checks pass.
+
+## Paper typography and specimen rebuild
+
+Compared against Paper’s rendered 48px, weight-360, −0.02em display typography. The revised shell uses a 40–48px lightweight introduction, 17px navigation, aligned 96px gutters at 1280px, and a compressed horizontal search toolbar. Original editorial SVG posters now sit inside a graphite reference library behind the working charcoal dialog. Fixed the inherited light background and catalog-label wrapping identified by the independent finish review. The reviewer’s final disposition was ship: all three findings resolved, including updated design measurements. The mechanical detector returned no findings. All eight browser checks pass; laptop geometry checks include empty and populated search states and complete native-dialog bounds at 1280×720 and 1440×900.

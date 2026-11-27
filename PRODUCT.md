@@ -34,4 +34,4 @@ The approved plan and live reference workflow. API claims require primary docume
 
 ## Latest visual reference
 
-The current reference is paper.design, superseding the earlier Glassly screenshot. Use a black canvas, warm ivory lightweight typography, neutral graphite editor chrome, and original warm paper specimen artboards. Preserve search, complete specimen, and clickable anatomy together at laptop sizes.
+The current reference is paper.design, superseding the earlier Glassly screenshot. Use a black canvas, warm ivory lightweight typography, neutral graphite editor chrome, and a dark editorial specimen canvas with original poster studies and a charcoal native dialog. Preserve search, complete specimen, and clickable anatomy together at laptop sizes.
