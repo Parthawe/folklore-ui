@@ -41,4 +41,4 @@ tooltip, dropdown-menu, mac-popover
 
 - [HTML Popover API](https://developer.mozilla.org/en-US/docs/Web/API/Popover_API)
 
-Updated 2026-11-23. Folklore 1.1.0. Original content licensed MIT.
+Updated 2026-11-23. Folklore 1.2.0. Original content licensed MIT.

@@ -40,4 +40,4 @@ skeleton, toast
 
 - [ARIA status role](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/status_role)
 
-Updated 2026-11-23. Folklore 1.1.0. Original content licensed MIT.
+Updated 2026-11-23. Folklore 1.2.0. Original content licensed MIT.

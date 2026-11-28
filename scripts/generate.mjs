@@ -3,6 +3,10 @@ import {catalog,entryPath} from '../content/catalog.mjs';
 import {base,origin,withBase} from '../src/lib/paths.mjs';
 import {markdown} from '../src/lib/markdown.mjs';
 const skill='plugin/skills/folklore';
+const audit='plugin/skills/design-slop-audit';
+await mkdir(`${audit}/scripts`,{recursive:true});
+await mkdir(`${audit}/references`,{recursive:true});
+await copyFile('src/lib/design-review.mjs',`${audit}/scripts/engine.mjs`);
 for(const dir of ['public/data','public/entries','public/fonts',`${skill}/references`,`${skill}/scripts`,`${skill}/agents`,'plugin/.codex-plugin']) await mkdir(dir,{recursive:true});
 await copyFile('node_modules/@fontsource/source-sans-3/LICENSE','public/fonts/LICENSE.txt');
 await copyFile('LICENSE',`${skill}/LICENSE`);
@@ -15,6 +19,6 @@ await copyFile('src/lib/search.mjs',`${skill}/scripts/search.mjs`);
 for(const e of catalog){await writeFile(`public/entries/${e.id}.md`,markdown(e));await writeFile(`${skill}/references/${e.id}.md`,markdown(e));}
 await writeFile(`${skill}/references/index.md`,'# Folklore catalog\n\n'+catalog.map(e=>`- [${e.name}](${e.id}.md) | ${e.platform} | ${e.description}`).join('\n'));
 await writeFile('public/robots.txt',`User-agent: *\nAllow: /\nSitemap: ${origin}${base}/sitemap.xml\n`);
-const paths=['/','/styles/','/saved/','/compare/','/install/','/about/','/privacy/','/license/',...catalog.map(entryPath)];
+const paths=['/','/styles/','/saved/','/compare/','/install/','/about/','/privacy/','/license/','/review/','/review/references/',...catalog.map(entryPath)];
 await writeFile('public/sitemap.xml',`<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${paths.map(p=>`<url><loc>${origin}${withBase(p)}</loc></url>`).join('')}</urlset>`);
 console.log(`Generated ${catalog.length} entries for website and offline skill.`);

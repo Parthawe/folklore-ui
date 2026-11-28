@@ -60,7 +60,7 @@ test('desktop/mobile fit, accessibility, downloads, and screenshots',async({page
  }
  await page.goto('/folklore-ui/');await expect(page.locator('.desk-frame-loading')).toBeHidden();await page.getByRole('button',{name:'Switch color theme'}).click();await expect(page.locator('html')).toHaveAttribute('data-theme','light');await page.screenshot({path:'artifacts/mobile-light.png'});await page.getByRole('button',{name:'Switch color theme'}).click();await expect(page.locator('html')).toHaveAttribute('data-theme','dark');
  expect(findings).toEqual([]);
- for(const path of ['/downloads/folklore-plugin-1.1.0.zip','/downloads/folklore-skill-1.1.0.zip','/privacy/','/license/','/entries/dialog.md'])expect((await request.get(withBase(path))).ok()).toBeTruthy();
+ for(const path of ['/downloads/folklore-plugin-1.2.0.zip','/downloads/folklore-skill-1.2.0.zip','/privacy/','/license/','/entries/dialog.md'])expect((await request.get(withBase(path))).ok()).toBeTruthy();
 });
 
 test('desktop search, complete specimen, and anatomy fit in one viewport',async({page})=>{
@@ -86,4 +86,47 @@ test('desktop search, complete specimen, and anatomy fit in one viewport',async(
    if(path==='/')await page.screenshot({path:`artifacts/${size.width}-compact-desktop.png`});
   }
  }
+});
+
+test('task-aware review changes with context, exports, and keeps evidence honest',async({page,context})=>{
+ await context.grantPermissions(['clipboard-read','clipboard-write']);
+ await page.goto('/folklore-ui/review/');
+ await expect(page.locator('[data-review-lens]')).toHaveText('Complete a task');
+ await expect(page.getByText('Evidence that has not been earned',{exact:true})).toBeVisible();
+ await expect(page.locator('[data-review-limits]')).toContainText('has not inspected a screen');
+ await page.getByRole('button',{name:'Data dashboard',exact:true}).click();
+ await expect(page.locator('[data-review-lens]')).toHaveText('Compare information');
+ await page.getByRole('tab',{name:'Task checks',exact:true}).click();
+ await expect(page.locator('[data-review-checks]')).toContainText('consistent units');
+ await expect(page.locator('[data-review-patterns] a').first()).toHaveAttribute('href','/folklore-ui/?entry=data-table');
+ await page.getByRole('tab',{name:'Task checks',exact:true}).press('ArrowRight');
+ await expect(page.getByRole('tab',{name:'Codex brief',exact:true})).toHaveAttribute('aria-selected','true');
+ await page.getByRole('button',{name:'Copy Codex brief',exact:true}).click();
+ await expect.poll(()=>page.evaluate(()=>navigator.clipboard.readText())).toContain('Compare weekly support requests');
+ const downloadPromise=page.waitForEvent('download');await page.getByRole('button',{name:'Save review (.md)',exact:true}).click();const download=await downloadPromise;expect(download.suggestedFilename()).toBe('folklore-design-review.md');
+ await page.getByLabel('Task type',{exact:true}).selectOption('explore');await page.getByRole('button',{name:'Build my review',exact:false}).click();await expect(page.locator('[data-review-lens]')).toHaveText('Explore creative work');await page.getByLabel('Task type',{exact:true}).selectOption('auto');
+ await page.getByLabel('What should someone accomplish?',{exact:true}).fill('Help a reader understand a project’s research.');await expect(page.locator('#review-task-help')).not.toContainText('example is loaded');
+ await expect(page.getByRole('button',{name:'Copy Codex brief',exact:true})).toBeDisabled();
+ await page.getByLabel('What is on the screen?',{exact:true}).fill('No gradients or fake testimonials. Clear headings and useful links.');
+ await page.getByRole('button',{name:'Build my review',exact:false}).click();
+ await expect(page.locator('[data-review-lens]')).toHaveText('Understand content');
+ await expect(page.locator('[data-review-risks]')).toContainText('No specific patterns matched');
+ await page.getByLabel('What is on the screen?',{exact:true}).fill('Fake testimonials <img src=x onerror=alert(1)> appear above the heading.');await page.getByRole('button',{name:'Build my review',exact:false}).click();
+ await expect(page.locator('.review-risk blockquote').first()).toContainText('<img src=x');await expect(page.locator('img[src=x]')).toHaveCount(0);
+ await page.getByRole('button',{name:'Clear inputs',exact:true}).click();await expect(page.locator('[data-review-empty]')).toBeVisible();await page.getByRole('button',{name:'Build my review',exact:false}).click();await expect(page.locator('#review-task')).toHaveAttribute('aria-invalid','true');await expect(page.locator('#review-error')).toContainText('at least 12');
+});
+
+test('review pages fit desktop and phone, remain accessible, and recover from clipboard failure',async({page})=>{
+ const findings:unknown[]=[];
+ for(const size of [{width:1280,height:720},{width:390,height:844}]){
+  await page.setViewportSize(size);
+  for(const path of ['/review/','/review/references/']){
+   await page.goto(withBase(path));await expect(page.locator('h1')).toBeVisible();await expect(page.getByRole('navigation',{name:'Main navigation',exact:true}).getByRole('link',{name:'Design review',exact:true})).toBeVisible();
+   expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1)).toBeTruthy();
+   const axe=await new AxeBuilder({page}).withTags(['wcag2a','wcag2aa','wcag21aa']).analyze();findings.push(...axe.violations.map(v=>({path,width:size.width,id:v.id,nodes:v.nodes.map(n=>({target:n.target,summary:n.failureSummary}))})));
+  }
+ }
+ await page.goto('/folklore-ui/review/');await page.getByRole('button',{name:'Switch color theme',exact:true}).click();await expect(page.locator('html')).toHaveAttribute('data-theme','light');const lightAxe=await new AxeBuilder({page}).withTags(['wcag2a','wcag2aa','wcag21aa']).analyze();findings.push(...lightAxe.violations.map(v=>({path:'/review/',theme:'light',id:v.id,nodes:v.nodes.map(n=>({target:n.target,summary:n.failureSummary}))})));
+ expect(findings).toEqual([]);
+ await page.addInitScript(()=>{Object.defineProperty(navigator,'clipboard',{value:{writeText:()=>Promise.reject(new Error('blocked'))},configurable:true});});await page.goto('/folklore-ui/review/');await page.getByRole('button',{name:'Copy Codex brief',exact:true}).click();await expect(page.locator('[data-review-status]')).toContainText('Clipboard unavailable');await expect(page.locator('[data-review-brief]')).toBeVisible();
 });

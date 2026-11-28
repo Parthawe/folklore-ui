@@ -37,3 +37,11 @@ Compared against Paper’s rendered 48px, weight-360, −0.02em display typograp
 ## Figtree and readable type roles
 
 Replaced DM Sans with self-hosted OFL Figtree after inspecting Paper’s 48px/360 display setting and comparing the rendered faces. Consolidated outer roles into 48px display, 24px title, 16px body/search, 14px labels, and 12px metadata; anatomy descriptions are 13px. Removed the specimen’s duplicate sidebar and increased poster/modal scale. The short-laptop layout reclaims height from the canvas and duplicate visual result counts, preserving text size. Geometry checks now include the selected-part readout in empty and searched states.
+
+## Task-aware design review — 27 November 2026
+
+Added a local review workbench that uses the task, audience, and described screen to suggest reported risks, potential consequences, task-specific fixes, preservation conditions, and untested checks. It distinguishes reported evidence from observed or measured findings. The English phrase rules do not inspect images, infer AI authorship, or certify accessibility. A research page and the downloadable 1.2.0 audit skill include 12 primary sources, with empirical research, usability guidance, and normative WCAG requirements identified separately.
+
+The workbench follows the Figtree, graphite, and ivory system. The independent finish review returned ship after five findings were resolved: mobile navigation visibility, stale example guidance, redundant labels, directional icons, and product documentation. Changing context invalidates exports until the report is rebuilt. User text stays local and is rendered as text; exported context is fenced JSON. A separate skill test verified purposeful decoration, negated claims, and actionable error advice.
+
+Validation passed: 15 unit tests, 10 browser tests, 40 catalog entries, skill metadata validation, and Astro checks across 38 files. The build produces 91 pages. Browser coverage includes review examples, manual task selection, keyboard tabs, clipboard failure, Markdown export, empty and stale states, text injection, mobile navigation, and automated accessibility checks in both themes. Theme changes now apply colors immediately to avoid transient low contrast. Existing search, complete specimen-dialog bounds, anatomy controls, and selected-part readout still fit at 1280×720 and 1440×900.

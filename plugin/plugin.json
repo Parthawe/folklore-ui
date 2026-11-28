@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "folklore",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Offline UI vocabulary and evidence-based screen design audits.",
   "author": {
     "name": "Parth Pawar"
@@ -19,8 +19,8 @@
     "com.openai": {
       "interface": {
         "displayName": "Folklore",
-        "shortDescription": "Name UI patterns and build from precise vocabulary",
-        "brandColor": "#285e4c"
+        "shortDescription": "UI vocabulary and task-aware design reviews",
+        "brandColor": "#9eabd0"
       }
     }
   }

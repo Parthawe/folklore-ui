@@ -64,6 +64,10 @@ typography:
     fontSize: "22px"
   scene-short-heading:
     fontSize: "21px"
+  review-risk-title:
+    fontSize: "18px"
+  review-source-title:
+    fontSize: "20px"
   download:
     fontSize: "19px"
   mobile-title:
@@ -175,3 +179,11 @@ Installation and copy-brief actions use ivory fills with dark text; hover uses t
 - Don't reuse Paper’s branding, commercial font files, or reference artwork.
 - Don't add promotional filler, invented proof, or decorative grids across the shell.
 - Don't treat specimen-only microcopy, small labels, or poster headings as reusable product typography.
+
+## Task-aware design review
+
+The review route extends the established black, graphite, ivory and Figtree system. Its 48px introduction leads into one connected input/result workbench. Desktop columns allocate 36% to context and the rest to the report, with a 320px input minimum. Fields use 14px working text, results use 14–16px prose, risk titles 18px, and supporting metadata 12px. Task type is the result heading; priority sits beside a risk title. Directional icons use authored 15px stroke SVGs.
+
+Inputs cover task, audience, screen description, and an editable task lens. The initial context is explicitly an example. Editing makes the existing report stale and disables exports until rebuilt. Empty inputs, missing task, no matched risks, clipboard refusal, and clear actions have explicit feedback. Tabs support arrow keys, Home, and End. Report details disclose evidence, change, verification, exception, and source. Downloaded context is serialized in JSON code blocks.
+
+At 900px the panels stack; at 700px use 16px gutters and 40px introductory type. Main navigation becomes a two-row header on phones so every destination remains available. The source library uses a linear bibliography with publisher, source type, purpose, and direct link. Review input stays local; recommendations are reported-description matches, not measured screen defects. Existing specimen-desk geometry requirements remain unchanged.

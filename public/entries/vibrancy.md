@@ -43,4 +43,4 @@ glassmorphism, sidebar, scrim
 - [NSVisualEffectView](https://developer.apple.com/documentation/appkit/nsvisualeffectview)
 - [SwiftUI Material](https://developer.apple.com/documentation/swiftui/material)
 
-Updated 2026-11-23. Folklore 1.1.0. Original content licensed MIT.
+Updated 2026-11-23. Folklore 1.2.0. Original content licensed MIT.

@@ -1,0 +1,43 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import ArrowIcon from '../../components/ArrowIcon.astro';
+import {withBase} from '../../lib/paths.mjs';
+import {examples,modes} from '../../lib/design-review.mjs';
+import '../../styles/design-review.css';
+const sample=examples[0];
+---
+<Layout active="review" title="Task-aware design review — Folklore" description="Describe the task and screen. Get a sourced plan for reducing generic design choices, preserving useful patterns, and testing the real interface.">
+ <div class="review-page">
+  <div class="review-intro"><h1>Give every choice<br/>a <em>reason to be there.</em></h1><div><p>Start with the task. Find the generic choices that get in its way, and decide what to change.</p><a href={withBase('/review/references/')}>Read the research & method <ArrowIcon/></a></div></div>
+  <div class="review-workbench">
+   <section class="review-input" aria-labelledby="review-input-title"><div class="review-panel-heading"><h2 id="review-input-title">Your design context</h2><span>Local review planner</span></div>
+    <form id="review-form" novalidate>
+     <label for="review-task">What should someone accomplish?</label><textarea id="review-task" rows="3" minlength="12" maxlength="1200" required aria-describedby="review-task-help review-error">{sample.task}</textarea><p id="review-task-help" class="review-help">Name an action and the outcome. An example is loaded.</p>
+     <div class="review-field-pair"><div><label for="review-mode">Task type</label><select id="review-mode"><option value="auto">Suggest from task</option>{modes.map(mode=><option value={mode.id}>{mode.label}</option>)}</select></div><div><label for="review-audience">Who is it for? <span>Optional</span></label><input id="review-audience" value={sample.audience} maxlength="180"/></div></div>
+     <label for="review-screen">What is on the screen?</label><textarea id="review-screen" rows="4" maxlength="5000" aria-describedby="review-screen-help">{sample.screen}</textarea><p id="review-screen-help" class="review-help">Describe the layout, copy, effects, and states in English. This tool reads your description, not an image or URL.</p>
+     <p id="review-error" class="review-error" role="alert"></p>
+     <div class="review-form-actions"><button type="submit" data-review-submit disabled>Build my review <ArrowIcon/></button><button type="button" data-review-clear>Clear inputs</button></div>
+     <div class="review-examples"><span>Try another task</span>{examples.map((example,index)=><button type="button" data-review-example={index}>{example.name}</button>)}</div>
+     <p class="review-privacy">Runs in this browser. Your description is not uploaded or saved.</p>
+    </form>
+    <noscript><p>Enable JavaScript to use the local planner, or use the downloadable screen-audit skill and <a href={withBase('/review/references/')}>research guide</a>.</p></noscript>
+   </section>
+   <section class="review-output" aria-labelledby="review-output-title">
+    <div class="review-panel-heading"><h2 id="review-output-title">Review plan</h2><span data-review-state>Example</span></div>
+    <p class="review-status" role="status" data-review-status></p>
+    <div data-review-result hidden>
+     <div class="review-task-lens"><h3 data-review-lens></h3><p data-review-principle></p><small data-review-reason></small></div>
+     <div class="review-tabs" role="tablist" aria-label="Review sections"><button role="tab" id="review-tab-risks" aria-controls="review-panel-risks" aria-selected="true" tabindex="0" data-review-tab="risks">Reported risks <span data-review-count></span></button><button role="tab" id="review-tab-checks" aria-controls="review-panel-checks" aria-selected="false" tabindex="-1" data-review-tab="checks">Task checks</button><button role="tab" id="review-tab-brief" aria-controls="review-panel-brief" aria-selected="false" tabindex="-1" data-review-tab="brief">Codex brief</button></div>
+     <div role="tabpanel" id="review-panel-risks" aria-labelledby="review-tab-risks" data-review-panel="risks"><p class="review-evidence-note">Matched to your description. Verify each detail in the actual screen.</p><div data-review-risks></div><div class="review-preserve"><h3>What to preserve</h3><p data-review-keep></p></div></div>
+     <div role="tabpanel" id="review-panel-checks" aria-labelledby="review-tab-checks" data-review-panel="checks" hidden><h3 class="review-section-title">Follow the task through.</h3><p class="review-evidence-note">These are untested checks, not confirmed defects.</p><ol class="review-checks" data-review-checks></ol><h3 class="review-section-title">Patterns to consider</h3><p class="review-evidence-note">Starting points to inspect, not a prescribed layout.</p><div class="review-patterns" data-review-patterns></div></div>
+     <div role="tabpanel" id="review-panel-brief" aria-labelledby="review-tab-brief" data-review-panel="brief" hidden><h3 class="review-section-title">Review the real interface in Codex.</h3><p class="review-evidence-note">Copy this into a chat with your screen or project. The agent should inspect it before confirming a finding.</p><textarea class="review-brief" readonly aria-label="Codex design review brief" data-review-brief></textarea></div>
+     <div class="review-export"><button data-review-copy>Copy Codex brief</button><button data-review-download>Save review (.md)</button></div>
+     <p class="review-limits" data-review-limits></p>
+    </div>
+    <div data-review-empty hidden><h3>Start with the person’s task.</h3><p>Describe what they need to do and what the screen contains. You’ll get a review plan with concrete changes, exceptions, and ways to verify them.</p></div>
+   </section>
+  </div>
+  <div class="review-bottom"><p>No AI-authorship score. No blanket ban on gradients, cards, or expressive type.</p><a href={withBase('/review/references/')}>Explore the source library</a><a href={withBase('/install/')}>Get the screen-audit skill</a></div>
+ </div>
+</Layout>
+<script>import '../../scripts/design-review';</script>

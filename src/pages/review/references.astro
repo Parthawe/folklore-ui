@@ -1,0 +1,14 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import ArrowIcon from '../../components/ArrowIcon.astro';
+import {withBase} from '../../lib/paths.mjs';
+import {sources} from '../../lib/design-review.mjs';
+import '../../styles/design-review.css';
+---
+<Layout active="review" title="Design slop: research and method — Folklore" description="The primary sources behind Folklore’s task-aware design review, with clear boundaries between accessibility standards, usability guidance, and editorial judgment.">
+ <article class="review-research"><a class="review-back" href={withBase('/review/')}><ArrowIcon direction="back"/> Back to design review</a><h1>Better reasons.<br/><em>Better interfaces.</em></h1><p class="review-research-lede">“AI slop” is useful shorthand for generic, unconsidered choices. It is not a diagnosis of who made a design.</p>
+ <div class="review-method"><div><h2>Start with the task</h2><p>A repeated card, expressive heading, or gradient can be useful. The question is whether it helps the intended person understand, decide, or act. Folklore’s judgments about generic styling are editorial; they are not accessibility rules.</p></div><div><h2>Ask for evidence</h2><p>The planner matches English phrases in your description and suggests checks for the selected task. It does not inspect screenshots, browse a submitted URL, run a model, measure contrast, or certify accessibility. Use its brief to review the real screen in Codex.</p></div><div><h2>Keep claims separate</h2><p>A reported detail is not a verified defect. A design preference is not a standard. A successful automated check is not a user study. Recommendations should name their evidence, exceptions, and the next test.</p></div></div>
+ <section class="review-source-library" aria-labelledby="source-library-title"><div class="review-source-heading"><h2 id="source-library-title">The reference library</h2><p>Selected primary sources, checked 27 November 2026. This is a curated foundation, not an exhaustive list or an endorsement by the authors.</p></div><ol>{sources.map(source=><li id={source.id}><div><span>{source.publisher} · {source.kind}</span><h3><a href={source.url} target="_blank" rel="noreferrer">{source.title} <ArrowIcon/></a></h3><p>{source.use}</p></div></li>)}</ol></section>
+ <section class="review-research-cta"><h2>Turn the sources into a review.</h2><p>Bring a task and a screen description. Keep the brand; question the choices that do not serve it.</p><a href={withBase('/review/')}>Build a review plan <ArrowIcon/></a></section>
+ </article>
+</Layout>
