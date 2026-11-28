@@ -4,11 +4,11 @@ description: A searchable specimen desk for interface vocabulary.
 colors:
   canvas: "#000"
   surface: "#282828"
-  surface-raised: "#363636"
+  surface-raised: "#383838"
   ink: "#eeeee5"
-  muted: "#aaa9a4"
-  line: "#3c3c3a"
-  accent: "#c5c9f2"
+  muted: "#b0afa8"
+  line: "#41413e"
+  accent: "#c6ceeb"
   stage: "#191919"
   light-canvas: "#f5f5ef"
   light-surface: "#e9e9e3"
@@ -19,29 +19,59 @@ colors:
   light-accent: "#494b83"
 typography:
   display:
-    fontFamily: "DM Sans Variable, sans-serif"
-    fontSize: "clamp(40px, 3.35vw, 48px)"
+    fontFamily: "Figtree Variable, sans-serif"
+    fontSize: "48px"
     fontWeight: 360
-    lineHeight: 1.05
+    lineHeight: 1.02
     letterSpacing: "-0.02em"
   title:
-    fontFamily: "DM Sans Variable, sans-serif"
-    fontSize: "25px"
+    fontFamily: "Figtree Variable, sans-serif"
+    fontSize: "24px"
     fontWeight: 400
     lineHeight: 1.1
     letterSpacing: "-0.02em"
   body:
-    fontFamily: "DM Sans Variable, sans-serif"
+    fontFamily: "Figtree Variable, sans-serif"
     fontSize: "16px"
     fontWeight: 400
     lineHeight: 1.5
   anatomy-title:
-    fontSize: "13px"
-    fontWeight: 500
+    fontSize: "14px"
+    fontWeight: 450
     letterSpacing: "0"
   anatomy-description:
+    fontSize: "13px"
+    lineHeight: 1.4
+  label:
+    fontSize: "14px"
+  caption:
     fontSize: "12px"
-    lineHeight: 1.5
+  code:
+    fontSize: "11px"
+  navigation:
+    fontSize: "17px"
+  prose-display-max:
+    fontSize: "64px"
+  specimen-avatar:
+    fontSize: "8px"
+  scene-meta:
+    fontSize: "10px"
+  scene-caption:
+    fontSize: "11px"
+  scene-collection:
+    fontSize: "26px"
+  scene-mobile-heading:
+    fontSize: "22px"
+  scene-short-heading:
+    fontSize: "21px"
+  download:
+    fontSize: "19px"
+  mobile-title:
+    fontSize: "28px"
+  narrow-display:
+    fontSize: "40px"
+  mobile-display:
+    fontSize: "42px"
 rounded:
   control: "4px"
   field: "5px"
@@ -92,33 +122,29 @@ The light theme maps the shell to the corresponding light tokens. The editorial 
 
 ## Typography
 
-Self-hosted DM Sans Variable supplies the interface typography as a licensed substitute for the reference’s commercial Matter font. Use lightweight headings and close tracking where the implementation defines them; body and compact labels retain their own spacing.
+Self-hosted Figtree Variable replaces DM Sans after a rendered comparison with Paper’s Matter lettering. Figtree is a licensed open-font approximation, not the original Matter font. The interface imports Fontsource’s variable family with swap loading; browser unicode-range selection fetches the needed subset. Its OFL notice is copied into public/fonts/Figtree-LICENSE.txt during generation.
 
-The desktop introduction follows the display token. The specimen title follows the title token. Introduction notes use 14px text at 1.5 line height; specimen descriptions use 13px at 1.6. Catalog names use 12px, weight 400. Anatomy names and descriptions follow their dedicated tokens; anatomy code uses 11px. Header navigation uses 17px. Monospace is reserved for code, keys, and small anatomy numbers.
+Use one interface family and five semantic roles: 48px display, 24px specimen title, 16px body/search, 14px working labels, and 12px supporting metadata. The desktop display holds 48px at both 1280px and 1440px, weight 360, line height 1.02, tracking −0.02em. Navigation uses 17px with −0.01em tracking. Anatomy names use 14px/1.4 at weight 450; descriptions use 13px/1.4. Code remains 11px monospace. Numbers use the interface family. Outer text sizes are declared through role variables, rather than repeated incidental sizes.
 
-The brand uses −0.035em tracking; prose-page headings use weight 360 and −0.04em tracking, with a 40–64px clamp on the installation page. The editorial specimen uses a 23px collection heading at weight 360 and a 23px dialog heading at weight 400. These smaller scene labels belong to the scaled demonstration, not the outer navigation.
+Prose stays at 16px with a comfortable measure. Introductory notes use 16px/1.45 and a maximum 40ch; specimen descriptions use 14px/1.5 and 60ch. Narrow layouts reduce only display type. The phone introduction uses 42px and 14px supporting copy. All controls retain visible keyboard focus and browser zoom.
 
 ## Layout
 
-Header, desk, and footer share a centered container with a 1280px maximum width and `calc(100% - 192px)` width. At a 1280px viewport this produces 96px side gutters. The desktop header is 70px high. The introduction has a flexible heading column, a 34% note column, a 32px gap, and 18px/24px vertical padding.
+Header, desk, and footer share a 1280px maximum and calc(100% - 192px) width, yielding 96px gutters at a 1280px viewport. The desktop header is 64px. The intro uses a flexible title column, a 31% note column, 30px gap, and 18px/26px vertical padding. At desktop heights up to 760px, intro padding becomes 14px/20px.
 
-The editor combines a 34px title bar, a compressed horizontal search row, and three connected workspace columns. The search row has a flexible input and adjacent examples, 14px gap, and 10px/14px padding. The field has a 40px minimum height. Search status occupies a full-width row when present.
+The editor combines a 32px title bar, a horizontal search row, and three connected panels. Search has a 42px minimum height, with a flexible input and adjacent example queries. Matching-count announcements are visually hidden because the count is already visible in the catalog; fetch, clipboard and storage failures remain visible. The desktop index is 182px and inspector 268px. The index scrolls independently. Catalog labels use 14px and may wrap rather than clip.
 
-The standard desktop index and inspector are 174px and 250px wide; the specimen fills the remaining space. The index scrolls independently, with a list maximum height of `calc(100dvh - 423px)`. The stage uses 16px/18px/12px padding. Its live canvas height is `clamp(280px, calc(100dvh - 430px), 470px)`, followed by controls and the selected-part readout. This density supports search, specimen, and anatomy together at laptop sizes; viewport fit still needs rendered verification when content changes.
+The stage uses 16px/18px/12px padding. Its live canvas is clamp(280px, calc(100dvh - 480px), 420px). At desktop heights up to 760px it becomes 260px, with reduced control/readout spacing. This preserves the larger font sizes and fits search, the entire example, anatomy controls, and the selected-part readout at 1280×720. The standard height applies at 1440×900. Test empty and populated queries on both catalog routes.
 
-At widths from 981px through 1200px, gutters shrink to 56px, columns become 160px/flexible/240px, and the introduction heading becomes 38px. Through 1100px, gutters shrink again to 24px and the inspector becomes 242px. At desktop heights of 760px or less, introduction and anatomy spacing compresses further.
-
-At 980px and below, the index is 165px, the inspector moves under the specimen, search examples move under the field, the heading becomes 30px, and the canvas is 350px high. At 700px and below, use 16px gutters, a 65px header, stacked panels, a horizontally scrolling catalog, a 44px minimum search field, a 340px canvas, and a 42px introduction heading. Anatomy descriptions remain visible; aliases use a disclosure.
+From 981px to 1200px, gutters become 40px, the index is 176px, inspector 250px, display 40px, and intro note 14px. At 980px the inspector moves below the specimen, the index becomes 175px, search examples move below the field, and canvas height is 370px. At 700px use 16px gutters, a 65px header, stacked panels, horizontal catalog, a 46px search field, and a 350px canvas. Phone anatomy descriptions use 14px/1.5.
 
 ## Elevation & Depth
 
-The outer editor is flat, with fine rules and tonal differences separating panels. It has no shadow. The scene inside the specimen uses a restrained workspace shadow (`0 12px 36px #0004`) and a stronger dialog shadow (`0 18px 50px #0007`) to explain actual layering.
-
-The native dialog backdrop defaults to translucent black. Anatomy inspection can darken the backdrop, apply a 7px blur, or outline the dialog. Preserve reduced-motion support and visible keyboard focus.
+Keep the shell flat. The specimen is a broad editorial canvas with a thin application bar and no duplicate sidebar or surrounding floating-window shadow. Posters fill the available scene. The native dialog uses its own 0 18px 50px #0007 shadow to explain real layering. Its backdrop defaults to translucent black; anatomy can deepen the dim layer, apply 7px blur, or outline the protected dialog surface.
 
 ## Shapes
 
-Use the editor, control, and field radii above. Borders are thin and neutral. The editorial scene uses a 6px workspace corner, an 8px dialog corner, and nearly square poster edges (1px). Avoid turning connected editor panels into separate floating cards.
+The editor has 12px corners, fields and controls 4px, and the native dialog 8px. Poster edges stay nearly square. Thin neutral rules join the panels. Avoid adding another card frame around the specimen canvas.
 
 ## Components
 
@@ -132,9 +158,9 @@ Use compact numbered buttons, graphite selected surfaces, and lavender selected 
 
 ### Editorial specimen
 
-The live scrim example is an inset reference-library workspace with a title bar, a 94px sidebar, and three original SVG poster studies: “Form & feeling.”, “The shape of a thought.”, and “In good company.” Artwork uses code-native geometry and typography. It is original illustrative content; the collection labels and counts are example data.
+The live scrim example is an inset reference-library workspace with a thin title bar and three original SVG poster studies: “Form & feeling.”, “The shape of a thought.”, and “In good company.” Artwork uses code-native geometry and typography. It is original illustrative content; the collection labels and counts are example data.
 
-The scene uses a charcoal native `dialog` with a collection destination, Cancel, and Save idea. Its form uses native dialog submission. Dim, blur, and dismiss anatomy inspection operate on the actual dialog layers. At specimen widths of 450px or less, the sidebar and third poster disappear, leaving two columns. Compact scene text must not become a default for outer product controls.
+The scene uses a charcoal native `dialog` with a collection destination, Cancel, and Save idea. Its form uses native dialog submission. Dim, blur, and dismiss anatomy inspection operate on the actual dialog layers. At specimen widths of 450px or less, the third poster disappears, leaving two columns. Compact scene text must not become a default for outer product controls.
 
 ### Buttons and supporting pages
 

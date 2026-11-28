@@ -8,7 +8,7 @@ await copyFile('node_modules/@fontsource/source-sans-3/LICENSE','public/fonts/LI
 await copyFile('LICENSE',`${skill}/LICENSE`);
 await copyFile('node_modules/@fontsource/bodoni-moda/LICENSE','public/fonts/Bodoni-Moda-LICENSE.txt');
 await copyFile('node_modules/@fontsource/work-sans/LICENSE','public/fonts/Work-Sans-LICENSE.txt');
-await copyFile('node_modules/@fontsource-variable/dm-sans/LICENSE','public/fonts/DM-Sans-LICENSE.txt');
+await copyFile('node_modules/@fontsource-variable/figtree/LICENSE','public/fonts/Figtree-LICENSE.txt');
 await writeFile('public/data/catalog.json',JSON.stringify(catalog.map(e=>({...e,url:withBase(entryPath(e))}))));
 await writeFile(`${skill}/references/catalog.json`,JSON.stringify(catalog,null,2));
 await copyFile('src/lib/search.mjs',`${skill}/scripts/search.mjs`);

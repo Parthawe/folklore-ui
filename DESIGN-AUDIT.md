@@ -33,3 +33,7 @@ Fixed legacy important color rules that overrode neutral specimen buttons. Remov
 ## Paper typography and specimen rebuild
 
 Compared against Paper’s rendered 48px, weight-360, −0.02em display typography. The revised shell uses a 40–48px lightweight introduction, 17px navigation, aligned 96px gutters at 1280px, and a compressed horizontal search toolbar. Original editorial SVG posters now sit inside a graphite reference library behind the working charcoal dialog. Fixed the inherited light background and catalog-label wrapping identified by the independent finish review. The reviewer’s final disposition was ship: all three findings resolved, including updated design measurements. The mechanical detector returned no findings. All eight browser checks pass; laptop geometry checks include empty and populated search states and complete native-dialog bounds at 1280×720 and 1440×900.
+
+## Figtree and readable type roles
+
+Replaced DM Sans with self-hosted OFL Figtree after inspecting Paper’s 48px/360 display setting and comparing the rendered faces. Consolidated outer roles into 48px display, 24px title, 16px body/search, 14px labels, and 12px metadata; anatomy descriptions are 13px. Removed the specimen’s duplicate sidebar and increased poster/modal scale. The short-laptop layout reclaims height from the canvas and duplicate visual result counts, preserving text size. Geometry checks now include the selected-part readout in empty and searched states.

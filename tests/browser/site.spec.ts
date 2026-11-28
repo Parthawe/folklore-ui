@@ -71,7 +71,7 @@ test('desktop search, complete specimen, and anatomy fit in one viewport',async(
    await expect(page.locator('.desk-frame-loading')).toBeHidden();
    for(const query of ['',path==='/'?'dark layer behind popup':'frosted cards']){
    await page.getByRole('searchbox').fill(query);await expect(page.locator('.desk-frame-loading')).toBeHidden();
-   for(const selector of ['.desk-search','.desk-canvas','[data-desk-part]']){
+   for(const selector of ['.desk-search','.desk-canvas','.desk-selected-part','[data-desk-part]']){
     for(const box of await page.locator(selector).evaluateAll(els=>els.map(el=>{const r=el.getBoundingClientRect();return {top:r.top,bottom:r.bottom,left:r.left,right:r.right};}))){
      expect(box.top,`${size.width} ${path} ${selector}: top`).toBeGreaterThanOrEqual(0);
      expect(box.bottom,`${size.width} ${path} ${selector}: bottom`).toBeLessThanOrEqual(size.height);
@@ -82,6 +82,7 @@ test('desktop search, complete specimen, and anatomy fit in one viewport',async(
    expect(await page.evaluate(()=>scrollY)).toBe(0);
    await page.locator('[data-desk-part="1"]').click();
    await expect(page.frameLocator('#desk-frame').locator('.specimen')).toHaveAttribute('data-inspect','1');
+   expect(await page.locator('.desk-selected-part').evaluate(el=>el.getBoundingClientRect().bottom)).toBeLessThanOrEqual(size.height);
    if(path==='/')await page.screenshot({path:`artifacts/${size.width}-compact-desktop.png`});
   }
  }
