@@ -42,4 +42,4 @@ skeuomorphism, glassmorphism
 - [Oleksandr Plyuto: first-person design specimen](https://dribbble.com/shots/15514071-NFT-The-First-Neumorphism)
 - [Axess Lab accessibility analysis](https://axesslab.com/neumorphism/)
 
-Updated 2026-11-23. Folklore 1.2.0. Original content licensed MIT.
+Updated 2026-11-23. Folklore 1.2.1. Original content licensed MIT.

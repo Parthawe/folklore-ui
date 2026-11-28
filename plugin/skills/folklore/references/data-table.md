@@ -41,4 +41,4 @@ pagination, skeleton
 
 - [WAI-ARIA table pattern](https://www.w3.org/WAI/ARIA/apg/patterns/table/)
 
-Updated 2026-11-23. Folklore 1.2.0. Original content licensed MIT.
+Updated 2026-11-23. Folklore 1.2.1. Original content licensed MIT.

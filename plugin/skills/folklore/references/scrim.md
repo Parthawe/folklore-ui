@@ -42,4 +42,4 @@ dialog, popover, vibrancy
 
 - [CSS backdrop pseudo-element](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/::backdrop)
 
-Updated 2026-11-23. Folklore 1.2.0. Original content licensed MIT.
+Updated 2026-11-23. Folklore 1.2.1. Original content licensed MIT.

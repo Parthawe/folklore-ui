@@ -41,4 +41,4 @@ flat-design, swiss-style
 
 - [NN/g research: characteristics of minimalism](https://www.nngroup.com/articles/characteristics-minimalism/)
 
-Updated 2026-11-23. Folklore 1.2.0. Original content licensed MIT.
+Updated 2026-11-23. Folklore 1.2.1. Original content licensed MIT.

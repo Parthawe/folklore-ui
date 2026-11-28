@@ -1,0 +1,92 @@
+/* Apple-informed control conventions inside Folklore’s editorial shell.
+   System UI resolves to the platform’s installed face; no Apple fonts are bundled. */
+:root{
+ --font-controls:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+ --control-bg:#343436;
+ --control-selected:#56565a;
+ --control-field:#1c1c1e;
+ --control-border:#737378;
+ --control-blue:#0964d2;
+ --control-blue-hover:#0758bd;
+ --control-selection:#244e7c;
+ --control-selection-text:#fff;
+ --accent:#9ac4ff;
+}
+:root[data-theme=light]{
+ --control-bg:#e2e2de;
+ --control-selected:#fafaf7;
+ --control-field:#fafaf7;
+ --control-border:#858580;
+ --control-selection:#d4e6fb;
+ --control-selection-text:#173e67;
+ --accent:#005dbb;
+}
+.desk-editor,.review-workbench{isolation:isolate}
+.editor-chrome,.desk-query-row,.desk-index,.desk-inspector,.review-workbench{font-family:var(--font-controls)}
+.editor-chrome{font-weight:500}
+.desk-search{background:var(--control-field);border-color:var(--control-border);border-radius:8px}
+.desk-search input{font-family:var(--font-controls)}
+.desk-search-clear{min-height:28px;border-radius:4px;background:var(--control-bg)}
+.desk-query-examples button{min-height:28px}
+.desk-index-tools select{font-family:var(--font-controls);border-radius:6px}
+.desk-entry{border-radius:6px}
+.desk-entry[aria-pressed=true]{background:var(--control-selection);color:var(--control-selection-text)}
+.desk-entry[aria-pressed=true] .entry-symbol,.desk-entry[aria-pressed=true] .entry-symbol:after{border-color:currentColor}
+.desk-entry[aria-pressed=true] .entry-symbol:after{background:var(--control-selection)}
+.inspector-switch{
+ display:grid;grid-template-columns:1fr 1fr;gap:2px;padding:3px;
+ margin:6px 0 0;border:0;border-radius:8px;background:var(--control-bg);
+}
+.inspector-switch button{
+ min-height:30px;padding:5px 8px;border:0;border-radius:6px;
+ font:500 13px/1.3 var(--font-controls);color:var(--muted);background:transparent;
+}
+.inspector-switch button:after{display:none}
+.inspector-switch button[aria-pressed=true]{background:var(--control-selected);color:var(--ink);border:0}
+.desk-parts>button{border-radius:6px}
+.desk-parts>button[aria-pressed=true]{background:var(--control-selection)}
+.desk-parts>button[aria-pressed=true] strong,
+.desk-parts>button[aria-pressed=true] code,
+.desk-parts>button[aria-pressed=true]>span>span{color:var(--control-selection-text)}
+.desk-parts>button[aria-pressed=true] .part-number{background:var(--control-selection-text);color:var(--control-selection)}
+.desk-copy-brief,.review-form-actions button[type=submit],.review-export button:first-child{
+ background:var(--control-blue);border-color:var(--control-blue);color:#fff;border-radius:8px;
+}
+.desk-copy-brief:hover:not(:disabled),.review-form-actions button[type=submit]:hover:not(:disabled),.review-export button:first-child:hover:not(:disabled){
+ background:var(--control-blue-hover);border-color:var(--control-blue-hover);color:#fff;filter:none;
+}
+.review-panel-heading h2{font-weight:600}
+.review-input textarea,.review-input input,.review-input select,.review-brief{
+ font-family:var(--font-controls);background:var(--control-field);border-color:var(--control-border);border-radius:8px;
+}
+.review-input label,.review-risk h4{font-weight:600}
+.review-task-lens h3{font:600 26px/1.2 var(--font-controls);letter-spacing:-.02em}
+.review-tabs{
+ display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:2px;
+ margin:0 24px;padding:3px;border:0;border-radius:8px;background:var(--control-bg);
+}
+.review-tabs button{
+ min-height:34px;padding:7px 6px;border:0;border-radius:6px;
+ font:500 13px/1.4 var(--font-controls);color:var(--muted);background:transparent;
+}
+.review-tabs button[aria-selected=true]{background:var(--control-selected);color:var(--ink);border:0}
+.review-tabs button:hover:not([aria-selected=true]),.inspector-switch button:hover:not([aria-pressed=true]){background:var(--surface-2);color:var(--ink)}
+.review-form-actions button,.review-export button{font-family:var(--font-controls);border-radius:8px}
+.review-export button:not(:first-child){background:var(--control-bg);border-color:var(--control-border)}
+.review-examples{column-gap:8px}
+.review-examples button{padding:5px 9px;border-radius:6px;min-height:32px;background:var(--control-bg);text-decoration:none}
+.review-examples button:hover{background:var(--surface-2)}
+.review-risk summary strong{font:600 17px/1.4 var(--font-controls);letter-spacing:-.01em}
+.review-risk summary:before,.review-risk summary:after{width:7px;top:25px;transform:rotate(45deg)}
+.review-risk summary:before{right:7px;transform:rotate(-45deg)}
+.review-risk[open] summary:before{display:block;transform:rotate(45deg)}
+.review-risk[open] summary:after{transform:rotate(-45deg)}
+.review-risk summary:hover strong{color:var(--accent)}
+.review-preserve h3,.review-section-title{font-family:var(--font-controls);font-weight:600}
+@media(max-width:700px){
+ .review-tabs{margin:0 16px;padding:3px;gap:2px}
+ .review-tabs button{font-size:12px;min-height:38px;padding:7px 3px}
+ .inspector-switch button{min-height:38px}
+ .review-examples button{min-height:40px;padding:8px 11px}
+ .review-export button{min-height:44px}
+}

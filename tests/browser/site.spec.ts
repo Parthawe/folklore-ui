@@ -10,6 +10,7 @@ test('desk search, platform filter, anatomy, and no-match recovery',async({page}
  await page.locator('[data-desk-part="1"]').click();await expect(page.locator('[data-desk-readout]')).toContainText('Blur');await expect(page.frameLocator('#desk-frame').locator('.specimen')).toHaveAttribute('data-inspect','1');
  await page.getByRole('button',{name:'Clear search',exact:true}).click();await expect(page.getByRole('searchbox')).toHaveValue('');await expect(page.locator('[data-desk-name]')).toHaveText('Scrim');await expect(page.frameLocator('#desk-frame').locator('.specimen')).toHaveAttribute('data-inspect','1');
  await page.getByRole('button',{name:'Agent brief',exact:true}).click();await expect(page.locator('[data-desk-prompt]')).toContainText('Implement a scrim');
+ await page.getByRole('button',{name:'Agent brief',exact:true}).press('ArrowLeft');await expect(page.getByRole('button',{name:'Anatomy',exact:true})).toHaveAttribute('aria-pressed','true');await expect(page.locator('[data-inspector-panel="anatomy"]')).toBeVisible();
  await page.getByRole('searchbox').fill('unrecognizablequuxxyz');await expect(page.getByText('No close match.',{exact:true})).toBeVisible();await page.getByRole('button',{name:'Reset search and filters',exact:true}).click();await expect(page.locator('[data-desk-entry]:visible')).toHaveCount(30);
  await page.goto('/folklore-ui/styles/');await page.getByRole('searchbox').fill('soft embossed buttons');await expect(page.locator('[data-desk-name]')).toHaveText('Neumorphism');
  await page.goto('/folklore-ui/?q=placeholder');await expect(page.locator('[data-desk-name]')).toHaveText('Form field');
@@ -60,7 +61,7 @@ test('desktop/mobile fit, accessibility, downloads, and screenshots',async({page
  }
  await page.goto('/folklore-ui/');await expect(page.locator('.desk-frame-loading')).toBeHidden();await page.getByRole('button',{name:'Switch color theme'}).click();await expect(page.locator('html')).toHaveAttribute('data-theme','light');await page.screenshot({path:'artifacts/mobile-light.png'});await page.getByRole('button',{name:'Switch color theme'}).click();await expect(page.locator('html')).toHaveAttribute('data-theme','dark');
  expect(findings).toEqual([]);
- for(const path of ['/downloads/folklore-plugin-1.2.0.zip','/downloads/folklore-skill-1.2.0.zip','/privacy/','/license/','/entries/dialog.md'])expect((await request.get(withBase(path))).ok()).toBeTruthy();
+ for(const path of ['/downloads/folklore-plugin-1.2.1.zip','/downloads/folklore-skill-1.2.1.zip','/privacy/','/license/','/entries/dialog.md'])expect((await request.get(withBase(path))).ok()).toBeTruthy();
 });
 
 test('desktop search, complete specimen, and anatomy fit in one viewport',async({page})=>{

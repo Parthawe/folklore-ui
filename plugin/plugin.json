@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "folklore",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Offline UI vocabulary and evidence-based screen design audits.",
   "author": {
     "name": "Parth Pawar"

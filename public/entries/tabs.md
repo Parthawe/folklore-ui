@@ -41,4 +41,4 @@ segmented-control, accordion
 
 - [WAI-ARIA tabs pattern](https://www.w3.org/WAI/ARIA/apg/patterns/tabs/)
 
-Updated 2026-11-23. Folklore 1.2.0. Original content licensed MIT.
+Updated 2026-11-23. Folklore 1.2.1. Original content licensed MIT.

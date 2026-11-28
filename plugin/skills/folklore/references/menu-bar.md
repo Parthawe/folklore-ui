@@ -43,4 +43,4 @@ status-item, dropdown-menu, window
 - [NSApplication mainMenu](https://developer.apple.com/documentation/appkit/nsapplication/mainmenu)
 - [SwiftUI commands](https://developer.apple.com/documentation/swiftui/scene/commands(content:))
 
-Updated 2026-11-23. Folklore 1.2.0. Original content licensed MIT.
+Updated 2026-11-23. Folklore 1.2.1. Original content licensed MIT.

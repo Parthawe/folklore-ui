@@ -42,4 +42,4 @@ y2k, glassmorphism
 
 - [CARI: Frutiger Aero](https://cari.institute/aesthetics/frutiger-aero)
 
-Updated 2026-11-23. Folklore 1.2.0. Original content licensed MIT.
+Updated 2026-11-23. Folklore 1.2.1. Original content licensed MIT.

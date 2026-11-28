@@ -85,9 +85,9 @@ codex plugin add folklore@folklore-local
 
 ## Task-aware design review
 
-Open `/review/` on the GitHub Pages site to prepare a local design-review plan. Enter the user’s task and reported screen details, then inspect risks, untested checks, useful patterns, and a copyable Codex brief. The tool matches English phrases and keywords; it does not inspect images or URLs, run a model, or assign an AI-authorship score. The research route links to twelve primary sources.
+Open `/review/` on the GitHub Pages site to prepare a local design-review plan. Enter the user’s task and reported screen details, then inspect risks, untested checks, useful patterns, and a copyable Codex brief. The tool matches English phrases and keywords; it does not inspect images or URLs, run a model, or assign an AI-authorship score. The research route links to fifteen primary sources.
 
-The `design-slop-audit` skill in v1.2.0 includes the same planner:
+The `design-slop-audit` skill in v1.2.1 includes the same planner:
 
 ```bash
 node scripts/review.mjs --task "Help a customer review their order and pay" --screen "No error state after an unavailable payment method" --markdown

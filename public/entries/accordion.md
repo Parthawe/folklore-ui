@@ -40,4 +40,4 @@ tabs, form-field
 
 - [HTML details](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/details)
 
-Updated 2026-11-23. Folklore 1.2.0. Original content licensed MIT.
+Updated 2026-11-23. Folklore 1.2.1. Original content licensed MIT.

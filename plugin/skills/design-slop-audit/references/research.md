@@ -94,6 +94,28 @@ https://www.w3.org/TR/WCAG22/
 
 Verify keyboard access, focus, resizing, targets, and status updates.
 
+### Human Interface Guidelines: Layout
+Apple · Platform design guidance
+https://developer.apple.com/design/human-interface-guidelines/layout
+
+Use familiar relationships, deliberate grouping, and progressive disclosure. Apply platform-specific guidance in context.
+
+### Human Interface Guidelines: Segmented Controls
+Apple · Platform component guidance
+https://developer.apple.com/design/human-interface-guidelines/segmented-controls
+
+Group closely related choices and make selection clear. Distinguish toolbar and inspector controls from main-content tab views.
+
+### Human Interface Guidelines: Toolbars
+Apple · Platform component guidance
+https://developer.apple.com/design/human-interface-guidelines/toolbars
+
+Prioritize frequently used actions, group commands by purpose, and adapt to available width.
+
+## Respect the target platform
+
+Identify whether the work is a website, macOS app, or an iOS/iPadOS app before prescribing controls. Familiar native patterns can reduce learning effort. Repetition alone does not establish a design defect. On Apple platforms, check the relevant Human Interface Guidelines and prefer standard components where suitable. On the web, adapt the relationship and behavior with semantic HTML; do not claim a browser simulation is native. Apple guidance is platform advice, not a web accessibility standard or an endorsement.
+
 ## Recommendation contract
 
 For each material finding provide location, evidence, user consequence, smallest suitable change, an exception worth preserving, and a verification step. Prioritize the critical path. Do not invent research, proof, user outcomes, compliance claims, or an arbitrary slop score.

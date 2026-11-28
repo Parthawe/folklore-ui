@@ -8,15 +8,29 @@ colors:
   ink: "#eeeee5"
   muted: "#b0afa8"
   line: "#41413e"
-  accent: "#c6ceeb"
+  accent: "#9ac4ff"
   stage: "#191919"
+  control-bg: "#343436"
+  control-selected: "#56565a"
+  control-field: "#1c1c1e"
+  control-border: "#737378"
+  control-blue: "#0964d2"
+  control-blue-hover: "#0758bd"
+  control-selection: "#244e7c"
+  control-selection-text: "#fff"
+  light-control-bg: "#e2e2de"
+  light-control-selected: "#fafaf7"
+  light-control-field: "#fafaf7"
+  light-control-border: "#858580"
+  light-control-selection: "#d4e6fb"
+  light-control-selection-text: "#173e67"
   light-canvas: "#f5f5ef"
   light-surface: "#e9e9e3"
   light-surface-raised: "#dcdcd5"
   light-ink: "#20211f"
   light-muted: "#61615c"
   light-line: "#ccccc4"
-  light-accent: "#494b83"
+  light-accent: "#005dbb"
 typography:
   display:
     fontFamily: "Figtree Variable, sans-serif"
@@ -68,6 +82,16 @@ typography:
     fontSize: "18px"
   review-source-title:
     fontSize: "20px"
+  control:
+    fontFamily: "system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif"
+    fontSize: "13px"
+    fontWeight: 500
+  review-task-title:
+    fontSize: "26px"
+    fontWeight: 600
+  review-working-title:
+    fontSize: "17px"
+    fontWeight: 600
   download:
     fontSize: "19px"
   mobile-title:
@@ -80,6 +104,8 @@ rounded:
   control: "4px"
   field: "5px"
   editor: "12px"
+  control-group: "8px"
+  control-selection: "6px"
 spacing:
   compact: "8px"
   control-gap: "12px"
@@ -120,7 +146,7 @@ The reference-library specimen uses a dark editorial canvas with original poster
 
 ## Colors
 
-The dark shell uses the canvas, surface, raised surface, ink, muted, and line tokens above. Lavender accents identify focus, anatomy code, and selected anatomy numbers. Selected catalog entries use raised graphite with a neutral border. The stage has its own darker graphite ground.
+The dark shell uses the canvas, surface, raised surface, ink, muted, and line tokens above. Blue accents identify focus and selection. Selected catalog entries and anatomy controls use a subdued blue surface with readable text. The stage has its own darker graphite ground.
 
 The light theme maps the shell to the corresponding light tokens. The editorial scene retains its dark surfaces. Poster color stays inside the artwork: the three studies combine cobalt and ivory, ivory and charcoal, and pale green with forest green.
 
@@ -187,3 +213,14 @@ The review route extends the established black, graphite, ivory and Figtree syst
 Inputs cover task, audience, screen description, and an editable task lens. The initial context is explicitly an example. Editing makes the existing report stale and disables exports until rebuilt. Empty inputs, missing task, no matched risks, clipboard refusal, and clear actions have explicit feedback. Tabs support arrow keys, Home, and End. Report details disclose evidence, change, verification, exception, and source. Downloaded context is serialized in JSON code blocks.
 
 At 900px the panels stack; at 700px use 16px gutters and 40px introductory type. Main navigation becomes a two-row header on phones so every destination remains available. The source library uses a linear bibliography with publisher, source type, purpose, and direct link. Review input stays local; recommendations are reported-description matches, not measured screen defects. Existing specimen-desk geometry requirements remain unchanged.
+
+
+## Apple-informed controls
+
+The user requested Apple UI conventions alongside the Paper-inspired shell. Keep Figtree for the identity, introductions, specimen titles, and reading surfaces. Use the platform system UI stack inside the operational index, inspector, and review workbench. On Apple devices this resolves to an installed system face; no Apple font files or SF Symbols are redistributed.
+
+`apple-ui.css` refines controls after the existing styles. Its semantic tokens above define dark and light fields, borders, selection surfaces, and blue primary actions. Primary review and copy buttons use white text on #0964d2; selected rows use #244e7c in dark mode and #d4e6fb in light mode. The page retains its existing theme and original specimen artwork.
+
+The inspector uses a two-choice segmented group. Left/Right and Home/End switch its existing pressed-button states without scrolling. Review tabs retain ARIA tab semantics and keyboard behavior, with equal-width segments, distinct selected surfaces, and 34px desktop/38px phone minimum heights. Search and fields use 8px corners, selected rows 6px, and the connected editor retains 12px corners. These are web adaptations informed by Apple HIG, not native controls.
+
+Sources: Apple HIG [Layout](https://developer.apple.com/design/human-interface-guidelines/layout), [Segmented controls](https://developer.apple.com/design/human-interface-guidelines/segmented-controls), and [Toolbars](https://developer.apple.com/design/human-interface-guidelines/toolbars). The review library identifies these as platform guidance, distinct from WCAG requirements. Exported briefs preserve target-platform conventions and do not treat familiar controls as defects merely because they are common. Native material, font, and control guidance must be interpreted for the actual target platform.

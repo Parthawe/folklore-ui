@@ -41,4 +41,4 @@ minimalism, skeuomorphism
 
 - [NN/g original flat-design research](https://www.nngroup.com/articles/flat-ui-less-attention-cause-uncertainty/)
 
-Updated 2026-11-23. Folklore 1.2.0. Original content licensed MIT.
+Updated 2026-11-23. Folklore 1.2.1. Original content licensed MIT.

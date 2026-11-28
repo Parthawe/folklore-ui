@@ -45,6 +45,13 @@ if(foundRoot){
  get('[data-desk-reset]').addEventListener('click',()=>{pendingPart=null;frame.src=frame.src;get('[data-desk-readout]').textContent='Example reset. Try the controls or inspect a part.';root.querySelectorAll('[data-desk-part]').forEach(b=>b.setAttribute('aria-pressed','false'));});
  frame.addEventListener('load',()=>{get('.desk-frame-loading').hidden=true;if(pendingPart!==null)inspect(pendingPart);if(restoreSearchFocus){input.focus({preventScroll:true});restoreSearchFocus=false;}});
  root.querySelectorAll<HTMLButtonElement>('[data-inspector-view]').forEach(b=>b.addEventListener('click',()=>{root.querySelectorAll('[data-inspector-view]').forEach(x=>x.setAttribute('aria-pressed',String(x===b)));root.querySelectorAll<HTMLElement>('[data-inspector-panel]').forEach(p=>p.hidden=p.dataset.inspectorPanel!==b.dataset.inspectorView);}));
+ const inspectorChoices=Array.from(root.querySelectorAll<HTMLButtonElement>('[data-inspector-view]'));
+ inspectorChoices.forEach((button,index)=>button.addEventListener('keydown',event=>{
+  if(!['ArrowLeft','ArrowRight','Home','End'].includes(event.key))return;
+  event.preventDefault();
+  const next=event.key==='Home'?0:event.key==='End'?inspectorChoices.length-1:(index+(event.key==='ArrowRight'?1:-1)+inspectorChoices.length)%inspectorChoices.length;
+  inspectorChoices[next].focus({preventScroll:true});inspectorChoices[next].click();
+ }));
  async function copy(text:string,b:HTMLElement){status.dataset.searchCount='false';const before=b.textContent;try{await navigator.clipboard.writeText(text);b.textContent='Copied';setTimeout(()=>b.textContent=before,1600);}catch{status.textContent='Clipboard unavailable. Select the brief text to copy it manually.';}}
  root.querySelectorAll<HTMLButtonElement>('[data-desk-copy]').forEach(b=>b.addEventListener('click',()=>{if(selected)copy(b.dataset.deskCopy==='debug'?`Debug my ${selected.name}. ${selected.debug} My symptom: `:selected.prompt,b);}));
  get('[data-desk-share]').addEventListener('click',e=>copy(location.href,e.currentTarget as HTMLElement));

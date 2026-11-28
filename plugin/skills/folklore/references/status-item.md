@@ -43,4 +43,4 @@ menu-bar, mac-popover, dock-badge
 - [NSStatusItem](https://developer.apple.com/documentation/appkit/nsstatusitem)
 - [MenuBarExtra](https://developer.apple.com/documentation/swiftui/menubarextra)
 
-Updated 2026-11-23. Folklore 1.2.0. Original content licensed MIT.
+Updated 2026-11-23. Folklore 1.2.1. Original content licensed MIT.

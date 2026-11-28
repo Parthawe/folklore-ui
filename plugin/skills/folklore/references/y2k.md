@@ -41,4 +41,4 @@ frutiger-aero, skeuomorphism
 
 - [CARI aesthetic archive](https://cari.institute/aesthetics/y2k-aesthetic)
 
-Updated 2026-11-23. Folklore 1.2.0. Original content licensed MIT.
+Updated 2026-11-23. Folklore 1.2.1. Original content licensed MIT.

@@ -42,4 +42,4 @@ sheet, window, dialog
 
 - [NSWindow beginSheet](https://developer.apple.com/documentation/appkit/nswindow/beginsheet(_:completionhandler:))
 
-Updated 2026-11-23. Folklore 1.2.0. Original content licensed MIT.
+Updated 2026-11-23. Folklore 1.2.1. Original content licensed MIT.
